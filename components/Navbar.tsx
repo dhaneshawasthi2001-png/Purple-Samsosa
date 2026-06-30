@@ -1,0 +1,173 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+
+export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Work", href: "#work" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-cream-base/90 border-b border-cream-deep backdrop-blur-md py-4 shadow-sm"
+            : "bg-transparent py-6"
+        }`}
+      >
+        <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex items-center justify-between">
+          {/* Logo Area */}
+          <Link href="#home" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Purple Samosa Logo"
+              width={260}
+              height={80}
+              className="h-[48px] md:h-[58px] w-auto object-contain"
+              priority
+            />
+          </Link>
+
+          {/* Desktop Nav Links */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="font-body font-medium text-sm text-ink/80 hover:text-purple-primary transition-colors cursor-pointer relative group py-1"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-purple-primary transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full" />
+              </Link>
+            ))}
+          </nav>
+
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 350, damping: 15 }}
+            >
+              <Link
+                href="#contact"
+                className="bg-purple-primary text-cream-base font-body font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-purple-deep hover:shadow-lg transition-all duration-200"
+              >
+                Start Your Growth
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="md:hidden p-2 text-ink hover:text-purple-primary transition-colors cursor-pointer"
+            aria-label="Open Menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            transition={{ type: "tween", duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 z-50 bg-purple-deep flex flex-col justify-between p-6 md:hidden"
+          >
+            <div className="grain-overlay" />
+            
+            {/* Header */}
+            <div className="flex items-center justify-between relative z-10">
+              {/* Inverted wordmark logo or standard logo on cream chip */}
+              <div className="bg-cream-base px-4 py-2 rounded-xl flex items-center shadow-sm">
+                <Image
+                  src="/logo.png"
+                  alt="Purple Samosa Logo"
+                  width={200}
+                  height={60}
+                  className="h-[36px] w-auto object-contain"
+                />
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-cream-base hover:text-white transition-colors cursor-pointer"
+                aria-label="Close Menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Links */}
+            <nav className="flex flex-col space-y-6 my-auto relative z-10 px-4">
+              {navLinks.map((link, idx) => (
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * idx }}
+                  key={link.label}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-display text-4xl font-medium text-cream-base hover:text-white transition-colors block lowercase"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+
+            {/* Bottom Panel */}
+            <div className="relative z-10 space-y-6 pb-6 px-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <Link
+                  href="#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-full text-center block bg-cream-base text-purple-deep font-body font-bold py-4 rounded-full hover:bg-white transition-colors"
+                >
+                  Start Your Growth
+                </Link>
+              </motion.div>
+              <p className="font-body text-xs text-purple-faint text-center tracking-wide">
+                Stuffed with Strategy. Served with Growth.
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

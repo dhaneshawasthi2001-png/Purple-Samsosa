@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors matching the Purple Samosa design system */
+  --color-cream-base: #EFE6D7;
+  --color-cream-soft: #F7F2EB;
+  --color-cream-deep: #E5DDCE;
+  --color-purple-primary: #402955;
+  --color-purple-deep: #362348;
+  --color-purple-soft: #665477;
+  --color-purple-faint: #8C7F99;
+  --color-ink: #0A0B1F;
+  --color-white: #FFFFFF;
+
+  /* Font pairings */
+  --font-display: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-body), "Inter", sans-serif;
+
+  /* Marquee infinite scroll animations */
+  --animate-marquee-strip: marquee-strip 40s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+
+  @keyframes marquee-strip {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+}
+
+/* Reset / Base Settings */
+html {
+  scroll-behavior: smooth;
+  background-color: #EFE6D7; /* cream-base */
+  color: #0A0B1F; /* ink */
+  font-family: var(--font-body), 'Inter', sans-serif;
+  overflow-x: clip;
+}
+
+body {
+  background-color: #EFE6D7;
+  color: #0A0B1F;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), "Helvetica", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Premium noise overlay for tactile feel */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 2;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F2EB; /* cream-soft */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #402955; /* purple-primary */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #362348; /* purple-deep */
+}
+
+/* Layout Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom cursor tracker (Desktop only) */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #402955;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid #402955;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Triangle fold shape divider (abstract F&B samosa reference) */
+.samosa-blob {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Custom structural background grids (Awwwards-style blueprint aesthetics) */
+.bg-grid-pattern {
+  background-size: 55px 55px;
+  background-image: 
+    linear-gradient(to right, rgba(64, 41, 85, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(64, 41, 85, 0.02) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 55px 55px;
+  background-image: 
+    linear-gradient(to right, rgba(239, 230, 215, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 230, 215, 0.015) 1px, transparent 1px);
+}

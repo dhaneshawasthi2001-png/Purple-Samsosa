@@ -35,19 +35,24 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-cream-base/90 border-b border-cream-deep backdrop-blur-md py-4 shadow-sm"
+            ? "bg-purple-deep border-b border-purple-soft/20 py-4 shadow-sm"
             : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex items-center justify-between">
           {/* Logo Area */}
-          <Link href="#home" className="flex items-center">
+          <Link 
+            href="#home" 
+            className="flex items-center transition-all duration-300"
+          >
             <Image
-              src="/logo.png"
+              src="https://res.cloudinary.com/dmj0smemf/image/upload/v1782811845/6_1_1_wweark.png"
               alt="Purple Samosa Logo"
               width={260}
               height={80}
-              className="h-[48px] md:h-[58px] w-auto object-contain"
+              className={`transition-all duration-300 object-contain ${
+                isScrolled ? "h-[32px] md:h-[38px]" : "h-[44px] md:h-[52px]"
+              } w-auto`}
               priority
             />
           </Link>
@@ -58,10 +63,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-body font-medium text-sm text-ink/80 hover:text-purple-primary transition-colors cursor-pointer relative group py-1"
+                className="font-body font-medium text-sm transition-colors cursor-pointer relative group py-1 text-white/80 hover:text-white"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-purple-primary transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full bg-white" />
               </Link>
             ))}
           </nav>
@@ -75,7 +80,11 @@ export default function Navbar() {
             >
               <Link
                 href="#contact"
-                className="bg-purple-primary text-cream-base font-body font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-purple-deep hover:shadow-lg transition-all duration-200"
+                className={`font-body font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-200 ${
+                  isScrolled 
+                    ? "bg-cream-base text-purple-deep hover:bg-white hover:shadow-lg" 
+                    : "bg-purple-primary text-cream-base hover:bg-purple-deep hover:shadow-lg"
+                }`}
               >
                 Start Your Growth
               </Link>
@@ -85,7 +94,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden p-2 text-ink hover:text-purple-primary transition-colors cursor-pointer"
+            className="md:hidden p-2 transition-colors cursor-pointer text-white hover:text-cream-soft"
             aria-label="Open Menu"
           >
             <Menu size={24} />
@@ -107,10 +116,10 @@ export default function Navbar() {
             
             {/* Header */}
             <div className="flex items-center justify-between relative z-10">
-              {/* Inverted wordmark logo or standard logo on cream chip */}
-              <div className="bg-cream-base px-4 py-2 rounded-xl flex items-center shadow-sm">
+              {/* Logo */}
+              <div className="flex items-center">
                 <Image
-                  src="/logo.png"
+                  src="https://res.cloudinary.com/dmj0smemf/image/upload/v1782811845/6_1_1_wweark.png"
                   alt="Purple Samosa Logo"
                   width={200}
                   height={60}

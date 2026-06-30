@@ -1,12 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import BrandElevation from "@/components/BrandElevation";
 import About from "@/components/About";
 import ServicesShowcase from "@/components/ServicesShowcase";
+import WorkDashboard from "@/components/WorkDashboard";
 import Manifesto from "@/components/Manifesto";
-import StatCounterSection from "@/components/StatCounterSection";
 import HowWeWork from "@/components/HowWeWork";
 import Portfolio from "@/components/Portfolio";
 import WhyUs from "@/components/WhyUs";
+import RevealBanner from "@/components/RevealBanner";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -22,17 +24,23 @@ export default function Home() {
         {/* Full-viewport Hero */}
         <Hero />
 
+        {/* Brand narrative section */}
+        <BrandElevation />
+
         {/* Origin / Partnership Details */}
         <About />
 
         {/* Pinned horizontal scroller services showcase */}
         <ServicesShowcase />
 
+        {/* Client Success Dashboard Portal */}
+        <WorkDashboard />
+
         {/* Text scroll-reveal statement banner */}
         <Manifesto />
 
-        {/* Pinned animated numeric stats counters */}
-        <StatCounterSection />
+        <RevealBanner />
+        {/* Parallax cover reveal banner */}
 
         {/* Sticky step process narrative */}
         <HowWeWork />
@@ -42,6 +50,7 @@ export default function Home() {
 
         {/* F&B design and growth value propositions grid */}
         <WhyUs />
+
 
         {/* Client feedback autoplay slider */}
         <Testimonials />

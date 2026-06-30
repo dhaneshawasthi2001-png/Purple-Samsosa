@@ -22,9 +22,8 @@ export default function ServicesShowcase() {
     target: containerRef,
   });
 
-  // Translate vertical scroll grid based on vertical progress
-  // With 8 cards (4 rows of 2), translating by -556px reveals all cards fully
-  const yTransform = useTransform(scrollYProgress, [0.03, 0.85], ["0px", "-556px"]);
+  // Translate horizontal track based on vertical scroll progress
+  const xTransform = useTransform(scrollYProgress, [0.05, 0.95], ["0%", "-78%"]);
 
   const services = [
     {
@@ -163,18 +162,18 @@ export default function ServicesShowcase() {
             ))}
           </div>
         ) : (
-          /* Desktop Scroll-Pinned Vertical Slider Grid */
-          <div className="relative w-full h-[580px] overflow-hidden">
+          /* Desktop Scroll-Pinned Horizontal Slider */
+          <div className="relative w-full h-[360px] md:h-[400px] overflow-hidden flex items-center">
             <motion.div
-              style={{ y: yTransform }}
-              className="absolute top-0 left-0 w-full grid grid-cols-2 gap-8 pr-2"
+              style={{ x: xTransform }}
+              className="flex gap-8 w-max select-none pr-8 md:pr-16"
             >
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ y: -8 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className={`w-full rounded-3xl border p-8 flex flex-col justify-between h-[260px] shadow-md relative overflow-hidden cursor-pointer ${service.bgClass}`}
+                  className={`w-[340px] md:w-[380px] h-[340px] flex-shrink-0 rounded-3xl border p-8 flex flex-col justify-between shadow-md relative overflow-hidden cursor-pointer ${service.bgClass}`}
                 >
                   {/* Background Samosa Triangle watermark */}
                   <div className="absolute -bottom-12 -right-12 opacity-[0.03] pointer-events-none select-none">

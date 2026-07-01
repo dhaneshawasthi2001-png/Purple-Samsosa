@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import BrandElevation from "@/components/BrandElevation";
 import About from "@/components/About";
 import ServicesShowcase from "@/components/ServicesShowcase";
-import WorkDashboard from "@/components/WorkDashboard";
+import MarqueeCrossing from "@/components/MarqueeCrossing";
+import VideoShowcase from "@/components/VideoShowcase";
+import SocialGrid from "@/components/SocialGrid";
 import Manifesto from "@/components/Manifesto";
 import HowWeWork from "@/components/HowWeWork";
 import Portfolio from "@/components/Portfolio";
@@ -24,17 +25,20 @@ export default function Home() {
         {/* Full-viewport Hero */}
         <Hero />
 
-        {/* Brand narrative section */}
-        <BrandElevation />
-
         {/* Origin / Partnership Details */}
         <About />
 
         {/* Pinned horizontal scroller services showcase */}
         <ServicesShowcase />
 
-        {/* Client Success Dashboard Portal */}
-        <WorkDashboard />
+        {/* Crossing infinite-scroll Gen Z marquee strips */}
+        <MarqueeCrossing />
+
+        {/* Our Work: Video Showcase */}
+        <VideoShowcase />
+
+        {/* Our Work: Curated Social Media Grid */}
+        <SocialGrid />
 
         {/* Text scroll-reveal statement banner */}
         <Manifesto />

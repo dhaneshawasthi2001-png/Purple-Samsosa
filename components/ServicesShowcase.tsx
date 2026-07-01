@@ -123,43 +123,87 @@ export default function ServicesShowcase() {
         </div>
 
         {/* Scrollable grid/stacked layout */}
+        {/* Scrollable grid/stacked layout */}
         {isMobile ? (
-          /* Mobile Stacked Layout with standard scroll-in */
-          <div className="flex flex-col space-y-6 px-4">
-            {services.map((service, index) => (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ type: "spring", stiffness: 100, damping: 15, delay: index * 0.05 }}
-                key={index}
-                className={`w-full rounded-3xl border p-8 flex flex-col justify-between min-h-[300px] shadow-sm relative overflow-hidden ${service.bgClass}`}
-              >
-                {/* Background Samosa Triangle watermark */}
-                <div className="absolute -bottom-16 -right-16 opacity-5 pointer-events-none select-none">
-                  <service.icon size={220} className="stroke-[1.5]" />
-                </div>
-
-                <div className="space-y-6 relative z-10">
-                  <div className={`p-4 bg-purple-primary/10 w-fit rounded-2xl ${service.iconColor}`}>
-                    <service.icon size={28} />
+          /* Mobile Horizontal Two-Row Layout */
+          <div className="flex flex-col space-y-8 px-4 overflow-hidden">
+            
+            {/* Row 1: First 4 services */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-4 pb-4 px-1 -mx-4 w-[calc(100%+2rem)] flex-row">
+              {services.slice(0, 4).map((service, index) => (
+                <motion.div
+                  initial={{ opacity: 0, x: 45 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ type: "spring", stiffness: 100, damping: 15, delay: index * 0.05 }}
+                  key={index}
+                  className={`w-[80vw] sm:w-[280px] shrink-0 snap-center rounded-3xl border p-6 flex flex-col justify-between min-h-[260px] shadow-sm relative overflow-hidden ${service.bgClass}`}
+                >
+                  {/* Background Samosa Triangle watermark */}
+                  <div className="absolute -bottom-12 -right-12 opacity-5 pointer-events-none select-none">
+                    <service.icon size={160} className="stroke-[1.5]" />
                   </div>
-                  
-                  <div className="space-y-2">
-                    <h3 className="font-display text-2xl font-medium lowercase leading-tight">
-                      {service.title}
-                    </h3>
-                    <p className={`font-body text-xs font-semibold uppercase tracking-wider ${service.accent}`}>
-                      {service.highlight}
+
+                  <div className="space-y-4 relative z-10 text-left">
+                    <div className={`p-3 bg-purple-primary/10 w-fit rounded-xl ${service.iconColor}`}>
+                      <service.icon size={22} />
+                    </div>
+                    
+                    <div className="space-y-1.5">
+                      <h3 className="font-display text-xl font-medium lowercase leading-tight">
+                        {service.title}
+                      </h3>
+                      <p className={`font-body text-[10px] font-bold uppercase tracking-wider ${service.accent}`}>
+                        {service.highlight}
+                      </p>
+                    </div>
+
+                    <p className="font-body text-xs opacity-80 leading-relaxed">
+                      {service.desc}
                     </p>
                   </div>
+                </motion.div>
+              ))}
+            </div>
 
-                  <p className="font-body text-sm opacity-80 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            {/* Row 2: Last 4 services */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-4 pb-4 px-1 -mx-4 w-[calc(100%+2rem)] flex-row">
+              {services.slice(4, 8).map((service, index) => (
+                <motion.div
+                  initial={{ opacity: 0, x: 45 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ type: "spring", stiffness: 100, damping: 15, delay: index * 0.05 }}
+                  key={index + 4}
+                  className={`w-[80vw] sm:w-[280px] shrink-0 snap-center rounded-3xl border p-6 flex flex-col justify-between min-h-[260px] shadow-sm relative overflow-hidden ${service.bgClass}`}
+                >
+                  {/* Background Samosa Triangle watermark */}
+                  <div className="absolute -bottom-12 -right-12 opacity-5 pointer-events-none select-none">
+                    <service.icon size={160} className="stroke-[1.5]" />
+                  </div>
+
+                  <div className="space-y-4 relative z-10 text-left">
+                    <div className={`p-3 bg-purple-primary/10 w-fit rounded-xl ${service.iconColor}`}>
+                      <service.icon size={22} />
+                    </div>
+                    
+                    <div className="space-y-1.5">
+                      <h3 className="font-display text-xl font-medium lowercase leading-tight">
+                        {service.title}
+                      </h3>
+                      <p className={`font-body text-[10px] font-bold uppercase tracking-wider ${service.accent}`}>
+                        {service.highlight}
+                      </p>
+                    </div>
+
+                    <p className="font-body text-xs opacity-80 leading-relaxed">
+                      {service.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
           </div>
         ) : (
           /* Desktop Scroll-Pinned Horizontal Slider */

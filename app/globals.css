@@ -22,19 +22,19 @@
 
   @keyframes marquee-strip {
     from {
-      transform: translateX(0%);
+      transform: translate3d(0%, 0, 0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 
   @keyframes marquee-reverse {
     from {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
     to {
-      transform: translateX(0%);
+      transform: translate3d(0%, 0, 0);
     }
   }
 }

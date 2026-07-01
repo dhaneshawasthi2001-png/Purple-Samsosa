@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -8,76 +9,17 @@ export default function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const clients = [
-    {
-      name: "Rajluxmi",
-      renderLogo: () => (
-        <div className="font-serif tracking-[0.16em] text-2xl md:text-3xl text-purple-primary font-semibold uppercase text-center select-none">
-          Rajluxmi
-        </div>
-      ),
-      subtext: "brand positioning & identity",
-    },
-    {
-      name: "Dadas Veg",
-      renderLogo: () => (
-        <div className="font-display tracking-tight text-xl md:text-2xl text-ink font-bold lowercase flex items-center justify-center space-x-1.5 select-none">
-          <span>dadas veg</span>
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-        </div>
-      ),
-      subtext: "performance marketing & ad campaigns",
-    },
-    {
-      name: "Nuttmeeg Bakers",
-      renderLogo: () => (
-        <div className="font-body tracking-wider text-lg md:text-xl text-purple-soft font-semibold lowercase italic flex items-center justify-center space-x-2 select-none">
-          <span>nuttmeeg bakers</span>
-        </div>
-      ),
-      subtext: "e-commerce web engineering",
-    },
-    {
-      name: "Frankfinn",
-      renderLogo: () => (
-        <div className="font-display tracking-[0.2em] text-sm md:text-base text-ink font-bold uppercase text-center flex flex-col items-center select-none">
-          <span>frankfinn</span>
-          <span className="text-[9px] tracking-[0.12em] font-body text-purple-faint font-semibold uppercase mt-0.5">
-            airhostess academy
-          </span>
-        </div>
-      ),
-      subtext: "local search & lead generation",
-    },
-    {
-      name: "Diamonds Dream Academy",
-      renderLogo: () => (
-        <div className="font-display tracking-wide text-base md:text-lg text-purple-deep font-semibold lowercase text-center flex flex-col items-center select-none">
-          <div className="flex items-center space-x-1.5">
-            <span className="text-xs text-purple-soft">◆</span>
-            <span>diamonds dream</span>
-            <span className="text-xs text-purple-soft">◆</span>
-          </div>
-          <span className="text-[10px] tracking-[0.1em] font-body text-purple-soft font-medium uppercase mt-0.5">
-            academy
-          </span>
-        </div>
-      ),
-      subtext: "social media scaling & content",
-    },
-    {
-      name: "Adalat",
-      renderLogo: () => (
-        <div className="font-serif tracking-widest text-xl md:text-2xl text-ink font-bold uppercase text-center border-y border-ink/10 py-1.5 px-5 select-none">
-          Adalat
-        </div>
-      ),
-      subtext: "search ranking & authority",
-    },
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892306/7_4_jv6ugx.png",
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892306/5_8_jvon6j.png",
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892306/6_6_uwrzex.png",
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892307/3_10_b3dqtj.png",
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892307/4_8_geyyam.png",
+    "https://res.cloudinary.com/dmj0smemf/image/upload/v1782892307/2_14_s1vuhy.png",
   ];
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
+      const { scrollLeft } = scrollRef.current;
       const cardWidth = 320; // width of card + gap
       const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
       
@@ -101,7 +43,7 @@ export default function Portfolio() {
             brands we&apos;ve helped grow.
           </h2>
           <p className="font-body text-sm md:text-base text-ink/70 mt-3 max-w-xl mx-auto font-normal">
-            Helping brands build distinct identities, scale their digital presence, and engineer high-performance acquisition systems.
+            Partnering with ambitious businesses to scale their digital reach and build memorable market presence.
           </p>
 
           {/* Slider Arrow Controls */}
@@ -129,26 +71,25 @@ export default function Portfolio() {
           className="flex items-stretch gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 px-1"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {clients.map((client, idx) => (
+          {clients.map((logoUrl, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05, type: "spring", stiffness: 100 }}
-              className="flex-shrink-0 w-[280px] sm:w-[320px] flex flex-col justify-between p-8 bg-cream-soft/75 backdrop-blur-sm border border-cream-deep rounded-3xl shadow-sm hover:border-purple-primary/30 transition-all duration-300 scroll-snap-align-start group"
+              className="flex-shrink-0 w-[240px] sm:w-[280px] flex items-center justify-center p-6 bg-cream-soft/75 backdrop-blur-sm border border-cream-deep rounded-3xl shadow-sm hover:border-purple-primary/30 transition-all duration-300 scroll-snap-align-start group"
               style={{ scrollSnapAlign: "start" }}
             >
-              {/* Typographic Logo Frame */}
-              <div className="h-[120px] w-full flex items-center justify-center bg-cream-base/50 rounded-2xl border border-cream-deep/40 group-hover:bg-cream-base transition-colors duration-300">
-                {client.renderLogo()}
-              </div>
-
-              {/* Label Info */}
-              <div className="mt-6 text-center">
-                <span className="font-body text-xs font-bold uppercase tracking-wider text-purple-soft select-none block">
-                  {client.subtext}
-                </span>
+              {/* Image Logo Frame */}
+              <div className="relative w-full h-[90px] sm:h-[110px] flex items-center justify-center">
+                <Image
+                  src={logoUrl}
+                  alt={`Client Logo ${idx + 1}`}
+                  fill
+                  className="object-contain filter opacity-90 group-hover:opacity-100 transition-all duration-300"
+                  sizes="(max-width: 768px) 200px, 250px"
+                />
               </div>
             </motion.div>
           ))}

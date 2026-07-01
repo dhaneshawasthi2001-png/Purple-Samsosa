@@ -91,11 +91,24 @@ export default function Footer() {
             Contact
           </h4>
           <div className="font-body text-sm text-cream-soft/80 space-y-3">
-            <p>hello@purplesamosa.com</p>
-            <p>+91 99999 99999</p>
-            <p className="leading-relaxed">
-              1st Floor, Design Hub,<br />
-              Sector 5, Lucknow, UP
+            <p className="hover:text-white transition-colors">
+              <a href="mailto:contact@purplesamosa.com">contact@purplesamosa.com</a>
+            </p>
+            <div className="space-y-1">
+              <p className="hover:text-white transition-colors">
+                <a href="tel:+918448447408">+91 84484 47408</a>
+              </p>
+              <p className="hover:text-white transition-colors">
+                <a href="tel:+916290345485">+91 62903 45485</a>
+              </p>
+              <p className="hover:text-white transition-colors">
+                <a href="tel:+919838676097">+91 98386 76097</a>
+              </p>
+            </div>
+            <p className="leading-relaxed text-xs">
+              Felix Parking, 302, Omaxe Residency 1,<br />
+              Arjunganj, Unit No-1219 12th floor,<br />
+              Lucknow, 226002, UP, IN
             </p>
           </div>
         </div>

@@ -95,13 +95,13 @@ export default function WhyUs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr"
         >
           
           {/* Card 1: Flagship Brand Card (Column 1, spans 2 rows) */}
           <motion.div
             variants={cardVariants}
-            className="lg:row-span-2 bg-purple-primary text-cream-base p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-500 border border-purple-soft/30 group min-h-[380px] lg:min-h-full"
+            className="col-span-2 lg:col-span-1 lg:row-span-2 bg-purple-primary text-cream-base p-6 md:p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-500 border border-purple-soft/30 group min-h-[280px] lg:min-h-full"
           >
             {/* Soft triangle watermark overlay */}
             <div 
@@ -113,18 +113,18 @@ export default function WhyUs() {
               <span className="font-body text-xs font-bold uppercase tracking-[0.2em] text-cream-soft/60 block">
                 our core commitment
               </span>
-              <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] lowercase tracking-tight">
+              <h3 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] lowercase tracking-tight">
                 why we <br /> do what <br /> we do.
               </h3>
             </div>
 
-            <div className="space-y-6 pt-8 relative z-10">
-              <p className="font-body text-sm text-cream-soft/85 leading-relaxed font-normal">
+            <div className="space-y-6 pt-4 lg:pt-8 relative z-10 text-left">
+              <p className="font-body text-xs sm:text-sm text-cream-soft/85 leading-relaxed font-normal">
                 We merge operational business margins with premium visual outputs to build high-performance acquisition engines.
               </p>
-              <div className="flex items-center space-x-2 bg-cream-base/10 px-4 py-3 rounded-2xl border border-cream-base/10 text-cream-base w-fit">
-                <Sparkles size={18} className="text-cream-soft" />
-                <span className="font-body text-xs font-semibold lowercase tracking-wide">
+              <div className="flex items-center space-x-2 bg-cream-base/10 px-4 py-2.5 rounded-xl border border-cream-base/10 text-cream-base w-fit">
+                <Sparkles size={14} className="text-cream-soft" />
+                <span className="font-body text-[10px] sm:text-xs font-semibold lowercase tracking-wide">
                   zero template models
                 </span>
               </div>
@@ -134,25 +134,27 @@ export default function WhyUs() {
           {/* Cards 2 to 6: Loop through valueProps (occupies columns 2 & 3 in rows 1 & 2) */}
           {valueProps.map((prop, idx) => {
             const PropIcon = prop.icon;
+            // The last item (index 4) spans full-width on mobile to avoid layout gaps
+            const gridSpanClass = idx === 4 ? "col-span-2 lg:col-span-1" : "col-span-1 lg:col-span-1";
             return (
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                className="bg-cream-base/40 backdrop-blur-sm border border-cream-deep/60 p-8 rounded-3xl shadow-sm hover:shadow-md hover:bg-cream-soft hover:border-purple-primary/20 hover:scale-[1.01] transition-all duration-500 flex flex-col justify-between min-h-[220px] relative group overflow-hidden cursor-pointer"
+                className={`${gridSpanClass} bg-cream-base/40 backdrop-blur-sm border border-cream-deep/60 p-5 md:p-8 rounded-3xl shadow-sm hover:shadow-md hover:bg-cream-soft hover:border-purple-primary/20 hover:scale-[1.01] transition-all duration-500 flex flex-col justify-between min-h-[190px] md:min-h-[220px] relative group overflow-hidden cursor-pointer`}
               >
                 {/* Subtle Step Number Chip */}
-                <div className="absolute top-8 right-8 font-mono text-[10px] text-purple-soft font-bold uppercase tracking-wider bg-purple-primary/5 px-2.5 py-0.5 rounded border border-purple-soft/5">
+                <div className="absolute top-4 right-4 md:top-8 md:right-8 font-mono text-[9px] md:text-[10px] text-purple-soft font-bold uppercase tracking-wider bg-purple-primary/5 px-2.5 py-0.5 rounded border border-purple-soft/5">
                   0{idx + 1}
                 </div>
 
-                <div className="space-y-4 relative z-10">
-                  <div className="text-purple-primary bg-purple-primary/5 p-3 rounded-2xl w-fit group-hover:bg-purple-primary group-hover:text-cream-base transition-all duration-500 shadow-sm">
-                    <PropIcon size={24} className="stroke-[1.75]" />
+                <div className="space-y-3 md:space-y-4 relative z-10 text-left">
+                  <div className="text-purple-primary bg-purple-primary/5 p-2.5 md:p-3 rounded-xl md:rounded-2xl w-fit group-hover:bg-purple-primary group-hover:text-cream-base transition-all duration-500 shadow-sm">
+                    <PropIcon size={20} className="stroke-[1.75] md:w-6 md:h-6" />
                   </div>
-                  <h3 className="font-display text-xl font-medium lowercase text-ink group-hover:text-purple-primary transition-colors duration-300">
+                  <h3 className="font-display text-base md:text-xl font-medium lowercase text-ink group-hover:text-purple-primary transition-colors duration-300">
                     {prop.title}
                   </h3>
-                  <p className="font-body text-xs sm:text-sm text-ink/70 leading-relaxed font-normal">
+                  <p className="font-body text-[11px] sm:text-xs md:text-sm text-ink/70 leading-relaxed font-normal">
                     {prop.desc}
                   </p>
                 </div>
@@ -163,28 +165,28 @@ export default function WhyUs() {
           {/* Card 7: Flagship Double-Width Card (Column 2 & 3 in Row 3) */}
           <motion.div
             variants={cardVariants}
-            className="col-span-1 md:col-span-2 bg-[#FAF8F5] border border-cream-deep/80 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-purple-primary/20 hover:scale-[1.005] transition-all duration-500 flex flex-col justify-between min-h-[220px] relative group overflow-hidden cursor-pointer"
+            className="col-span-2 lg:col-span-2 bg-[#FAF8F5] border border-cream-deep/80 p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-purple-primary/20 hover:scale-[1.005] transition-all duration-500 flex flex-col justify-between min-h-[200px] md:min-h-[220px] relative group overflow-hidden cursor-pointer"
           >
             {/* Subtle Step Number Chip */}
-            <div className="absolute top-8 right-8 font-mono text-[10px] text-purple-soft font-bold uppercase tracking-wider bg-purple-primary/5 px-2.5 py-0.5 rounded border border-purple-soft/5">
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 font-mono text-[9px] md:text-[10px] text-purple-soft font-bold uppercase tracking-wider bg-purple-primary/5 px-2.5 py-0.5 rounded border border-purple-soft/5">
               06
             </div>
 
-            <div className="space-y-4 relative z-10">
-              <div className="text-purple-primary bg-purple-primary/5 p-3 rounded-2xl w-fit group-hover:bg-purple-primary group-hover:text-cream-base transition-all duration-500 shadow-sm">
-                <flagshipProp.icon size={24} className="stroke-[1.75]" />
+            <div className="space-y-4 relative z-10 text-left">
+              <div className="text-purple-primary bg-purple-primary/5 p-2.5 md:p-3 rounded-xl md:rounded-2xl w-fit group-hover:bg-purple-primary group-hover:text-cream-base transition-all duration-500 shadow-sm">
+                <flagshipProp.icon size={20} className="stroke-[1.75] md:w-6 md:h-6" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
                 <div className="md:col-span-5 space-y-1">
-                  <h3 className="font-display text-xl font-medium lowercase text-ink group-hover:text-purple-primary transition-colors duration-300">
+                  <h3 className="font-display text-base md:text-xl font-medium lowercase text-ink group-hover:text-purple-primary transition-colors duration-300">
                     {flagshipProp.title}
                   </h3>
-                  <span className="font-body text-[10px] font-bold text-purple-soft uppercase tracking-wider block">
+                  <span className="font-body text-[9px] md:text-[10px] font-bold text-purple-soft uppercase tracking-wider block">
                     partnership approach
                   </span>
                 </div>
                 <div className="md:col-span-7">
-                  <p className="font-body text-xs sm:text-sm text-ink/70 leading-relaxed font-normal">
+                  <p className="font-body text-xs md:text-sm text-ink/70 leading-relaxed font-normal">
                     {flagshipProp.desc}
                   </p>
                 </div>

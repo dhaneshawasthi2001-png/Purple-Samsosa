@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 export default function WorkDashboard() {
-  const [activeTab, setActiveTab] = useState<"branding" | "social" | "ads" | "seo">("branding");
+  const [activeTab, setActiveTab] = useState<"branding" | "social" | "ads_seo">("branding");
 
   const tabs = [
     { 
@@ -29,16 +29,10 @@ export default function WorkDashboard() {
       icon: Instagram 
     },
     { 
-      id: "ads", 
-      label: "meta ads", 
-      sublabel: "paid acquisition creatives",
+      id: "ads_seo", 
+      label: "meta ads & SEO", 
+      sublabel: "paid campaigns & search ranking",
       icon: Megaphone 
-    },
-    { 
-      id: "seo", 
-      label: "SEO visibility", 
-      sublabel: "organic rankings & growth",
-      icon: Search 
     },
   ] as const;
 
@@ -108,11 +102,16 @@ export default function WorkDashboard() {
         url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80"
       },
     ],
-    ads: [
+    ads_seo: [
       {
         title: "fresh box campaign",
         category: "instagram stories format ad",
         url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        title: "organic traffic scaling",
+        category: "technical audits & core web vitals",
+        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
       },
       {
         title: "sage serum launch",
@@ -120,56 +119,19 @@ export default function WorkDashboard() {
         url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80"
       },
       {
-        title: "roam luggage slides",
-        category: "carousel promotion design",
-        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "volt fitness ads",
-        category: "high-contrast promo graphics",
-        url: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "maison seasonal offer",
-        category: "lifestyle brand discount banner",
-        url: "https://images.unsplash.com/photo-1534452208111-2f354f6a729a?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "atlas app interface",
-        category: "lead gen ad screen",
-        url: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80"
-      },
-    ],
-    seo: [
-      {
-        title: "organic traffic scaling",
-        category: "technical audits & core web vitals",
-        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
-      },
-      {
         title: "keyword indexing growth",
         category: "content strategy & domain ranking",
         url: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
       },
       {
+        title: "roam luggage slides",
+        category: "carousel promotion design",
+        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+      },
+      {
         title: "conversion path audits",
         category: "user funnel optimization dashboard",
         url: "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "local search domination",
-        category: "gmb audits & schema markers",
-        url: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "performance workstations",
-        category: "daily organic search tracking",
-        url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80"
-      },
-      {
-        title: "organic audit overview",
-        category: "ranking performance matrix",
-        url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80"
       },
     ],
   };

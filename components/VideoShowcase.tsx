@@ -17,7 +17,7 @@ interface VideoItem {
 export default function VideoShowcase() {
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-  
+
   // Keep track of DOM elements for play/pause on hover
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
 
@@ -55,7 +55,7 @@ export default function VideoShowcase() {
     setHoveredId(id);
     const video = videoRefs.current[id];
     if (video) {
-      video.play().catch(() => {});
+      video.play().catch(() => { });
     }
   };
 
@@ -75,7 +75,7 @@ export default function VideoShowcase() {
       <div className="absolute top-1/3 right-1/4 w-[45vw] h-[45vw] bg-purple-soft/5 blur-[120px] samosa-blob pointer-events-none select-none" />
 
       <div className="max-w-[1280px] mx-auto px-6 md:px-8 relative z-10">
-        
+
         {/* Header Elements */}
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <span className="font-body text-xs font-bold uppercase tracking-[0.18em] text-purple-primary bg-cream-deep/60 px-5 py-2 rounded-full border border-cream-deep inline-block mb-4">
@@ -92,7 +92,7 @@ export default function VideoShowcase() {
 
         {/* Video Grid Layout / Horizontal Swiper on Mobile */}
         <div className="flex lg:grid overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory scroll-smooth no-scrollbar flex-row lg:grid-cols-4 gap-6 lg:gap-8 items-stretch pb-8 lg:pb-0 px-4 md:px-6 lg:px-0 -mx-4 md:-mx-6 lg:mx-0 w-[calc(100%+2rem)] md:w-[calc(100%+3rem)] lg:w-auto">
-          
+
           {/* Vertical Video 1 (col-span-1) */}
           <div className="flex justify-center w-[82vw] sm:w-[320px] lg:w-full shrink-0 lg:shrink snap-center lg:snap-none">
             <motion.div
@@ -103,7 +103,7 @@ export default function VideoShowcase() {
               className="w-full flex flex-col justify-between"
             >
               {/* Phone Mockup Frame */}
-              <div 
+              <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
                 onMouseEnter={() => handleMouseEnter("video-1")}
                 onMouseLeave={() => handleMouseLeave("video-1")}
@@ -144,13 +144,13 @@ export default function VideoShowcase() {
                       PS
                     </div>
                     <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
-                      purplesamosa.co
+                      purplesamosa
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
                     </span>
                   </div>
                   {/* Caption */}
                   <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
-                    shot by purple samosa ✦
+                    shot by purple samosa
                   </p>
                   {/* Audio */}
                   <div className="flex items-center gap-1 text-white/80">
@@ -188,7 +188,7 @@ export default function VideoShowcase() {
               className="w-full flex flex-col justify-between"
             >
               {/* Phone Mockup Frame */}
-              <div 
+              <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
                 onMouseEnter={() => handleMouseEnter("video-2")}
                 onMouseLeave={() => handleMouseLeave("video-2")}
@@ -229,13 +229,13 @@ export default function VideoShowcase() {
                       PS
                     </div>
                     <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
-                      purplesamosa.co
+                      purplesamosa
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
                     </span>
                   </div>
                   {/* Caption */}
                   <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
-                    shot by purple samosa ✦
+                    shot by purple samosa
                   </p>
                   {/* Audio */}
                   <div className="flex items-center gap-1 text-white/80">
@@ -273,7 +273,7 @@ export default function VideoShowcase() {
               className="w-full flex flex-col justify-between"
             >
               {/* Phone Mockup Frame */}
-              <div 
+              <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
                 onMouseEnter={() => handleMouseEnter("video-3")}
                 onMouseLeave={() => handleMouseLeave("video-3")}
@@ -314,13 +314,13 @@ export default function VideoShowcase() {
                       PS
                     </div>
                     <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
-                      purplesamosa.co
+                      purplesamosa
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
                     </span>
                   </div>
                   {/* Caption */}
                   <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
-                    shot by purple samosa ✦
+                    shot by purple samosa
                   </p>
                   {/* Audio */}
                   <div className="flex items-center gap-1 text-white/80">
@@ -359,7 +359,7 @@ export default function VideoShowcase() {
             >
               {/* Grain overlay */}
               <div className="grain-overlay opacity-[0.025]" />
-              
+
               <div className="absolute top-6 right-6 text-[#2ec4b6] opacity-35">
                 <Sparkles size={28} className="animate-pulse" />
               </div>
@@ -374,8 +374,8 @@ export default function VideoShowcase() {
               </div>
 
               <div className="flex flex-col space-y-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#2ec4b6] pt-6 border-t border-purple-soft/30 relative z-10 text-left">
-                <span>✦ vertical campaign formats</span>
-                <span>✦ data-backed pacing hooks</span>
+                <span> vertical campaign formats</span>
+                <span> data-backed pacing hooks</span>
               </div>
             </motion.div>
           </div>
@@ -387,14 +387,14 @@ export default function VideoShowcase() {
       {/* Full-Screen Theatre Lightbox Player Modal */}
       <AnimatePresence>
         {activeVideo && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-ink/95 z-[9999] flex items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setActiveVideo(null)}
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -412,7 +412,7 @@ export default function VideoShowcase() {
                     {activeVideo.title}
                   </h4>
                 </div>
-                
+
                 {/* Close Button */}
                 <button
                   onClick={() => setActiveVideo(null)}

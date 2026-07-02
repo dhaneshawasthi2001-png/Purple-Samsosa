@@ -38,9 +38,19 @@ export default function FinalCTA() {
 
     setStatus("submitting");
 
-    // Simulate API request to server/form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Package details for WhatsApp
+    const chosenServices = services.length > 0 ? services.join(", ") : "None selected";
+    const textMessage = `Hi Purple Samosa,\n\nI just filled out the contact form on your website:\n\n*Name:* ${name}\n*Email:* ${email}\n*Brand:* ${brand || "N/A"}\n*Services Wanted:* ${chosenServices}\n*Project Brief:* ${message || "N/A"}`;
     
+    const encodedText = encodeURIComponent(textMessage);
+    const whatsappUrl = `https://wa.me/918448447408?text=${encodedText}`;
+
+    // Simulate short submission transition
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, "_blank");
+
     setStatus("success");
     
     // Clear form
@@ -141,7 +151,7 @@ export default function FinalCTA() {
             {/* Direct Link to WhatsApp */}
             <motion.div variants={itemVariants} className="pt-2">
               <a
-                href="https://wa.me/919999999999?text=Hi%20Purple%20Samosa%2C%20I%20would%20like%20to%20get%20a%20free%20audit%20for%20my%20brand."
+                href="https://wa.me/918448447408?text=Hi%20Purple%20Samosa%2C%20I%20would%20like%20to%20get%20a%20free%20audit%20for%20my%20brand."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-cream-deep/50 hover:bg-cream-deep text-purple-primary border border-cream-deep font-body font-semibold text-sm px-6 py-3.5 rounded-full hover:shadow-md transition-all duration-300 group cursor-pointer"

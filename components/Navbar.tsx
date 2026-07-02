@@ -52,7 +52,7 @@ export default function Navbar() {
               height={80}
               className={`transition-all duration-300 object-contain ${
                 isScrolled ? "h-[32px] md:h-[38px]" : "h-[44px] md:h-[52px]"
-              } w-auto`}
+              } w-auto ${isScrolled ? "" : "brightness-0 opacity-80"}`}
               priority
             />
           </Link>
@@ -63,10 +63,14 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-body font-medium text-sm transition-colors cursor-pointer relative group py-1 text-white/80 hover:text-white"
+                className={`font-body font-medium text-sm transition-colors cursor-pointer relative group py-1 ${
+                  isScrolled ? "text-white/80 hover:text-white" : "text-purple-deep/80 hover:text-purple-deep"
+                }`}
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full bg-white" />
+                <span className={`absolute bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full ${
+                  isScrolled ? "bg-white" : "bg-purple-deep"
+                }`} />
               </Link>
             ))}
           </nav>
@@ -94,7 +98,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden p-2 transition-colors cursor-pointer text-white hover:text-cream-soft"
+            className={`md:hidden p-2 transition-colors cursor-pointer ${
+              isScrolled ? "text-white hover:text-cream-soft" : "text-purple-deep hover:text-purple-soft"
+            }`}
             aria-label="Open Menu"
           >
             <Menu size={24} />

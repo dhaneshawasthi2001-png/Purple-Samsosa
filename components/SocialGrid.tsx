@@ -148,8 +148,8 @@ export default function SocialGrid() {
           <span>Double-click any post to like & drop a heart</span>
         </div>
 
-        {/* Instagrid 3x2 Layout / Mobile swiper */}
-        <div className="flex lg:grid overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory scroll-smooth no-scrollbar flex-row lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto pb-8 lg:pb-0 px-4 lg:px-0 -mx-4 lg:mx-0 w-[calc(100%+2rem)] lg:w-auto">
+        {/* Instagrid 3x2 Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto pb-8">
           {posts.map((post) => (
             <motion.div
               key={post.id}
@@ -157,7 +157,7 @@ export default function SocialGrid() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 90, damping: 15 }}
-              className="relative aspect-square rounded-3xl overflow-hidden border border-cream-deep bg-cream-deep/40 group shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer select-none w-[80vw] sm:w-[300px] lg:w-auto shrink-0 lg:shrink snap-center lg:snap-none"
+              className="relative aspect-square rounded-3xl overflow-hidden border border-cream-deep bg-cream-deep/40 group shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer select-none w-full"
               onDoubleClick={() => handleDoubleTap(post.id)}
               onClick={() => setActivePost(post)}
             >

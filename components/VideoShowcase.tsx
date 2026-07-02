@@ -135,13 +135,38 @@ export default function VideoShowcase() {
                     <Play size={20} className="fill-cream-soft ml-0.5" />
                   </div>
                 </div>
+
+                {/* Instagram Reel Style Overlay on Hover */}
+                <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
+                  {/* Account Row */}
+                  <div className="flex items-center space-x-2 mb-1.5">
+                    <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
+                      PS
+                    </div>
+                    <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
+                      purplesamosa.co
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
+                    </span>
+                  </div>
+                  {/* Caption */}
+                  <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
+                    shot by purple samosa ✦
+                  </p>
+                  {/* Audio */}
+                  <div className="flex items-center gap-1 text-white/80">
+                    <span className="text-[8px] animate-pulse">🎵</span>
+                    <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
+                      Original Audio — Purple Samosa
+                    </span>
+                  </div>
+                </div>
               </div>
 
               {/* Text info below the video screen */}
               <div className="mt-4 text-center">
                 <span className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-wider text-purple-primary flex items-center justify-center gap-1.5">
                   <Flame size={12} className="fill-purple-primary text-purple-primary" />
-                  {videos[0].client}
+                  shot by purple samosa
                 </span>
                 <h3 className="font-display text-base sm:text-lg font-semibold text-ink lowercase mt-1 leading-tight">
                   {videos[0].title}
@@ -193,6 +218,31 @@ export default function VideoShowcase() {
                 <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
                   <div className="w-14 h-14 rounded-full bg-cream-soft/10 border border-cream-soft/30 backdrop-blur-sm flex items-center justify-center text-cream-soft shadow-inner">
                     <Play size={20} className="fill-cream-soft ml-0.5" />
+                  </div>
+                </div>
+
+                {/* Instagram Reel Style Overlay on Hover */}
+                <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
+                  {/* Account Row */}
+                  <div className="flex items-center space-x-2 mb-1.5">
+                    <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
+                      PS
+                    </div>
+                    <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
+                      purplesamosa.co
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
+                    </span>
+                  </div>
+                  {/* Caption */}
+                  <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
+                    shot by purple samosa ✦
+                  </p>
+                  {/* Audio */}
+                  <div className="flex items-center gap-1 text-white/80">
+                    <span className="text-[8px] animate-pulse">🎵</span>
+                    <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
+                      Original Audio — Purple Samosa
+                    </span>
                   </div>
                 </div>
               </div>
@@ -253,6 +303,31 @@ export default function VideoShowcase() {
                 <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
                   <div className="w-14 h-14 rounded-full bg-cream-soft/10 border border-cream-soft/30 backdrop-blur-sm flex items-center justify-center text-cream-soft shadow-inner">
                     <Play size={20} className="fill-cream-soft ml-0.5" />
+                  </div>
+                </div>
+
+                {/* Instagram Reel Style Overlay on Hover */}
+                <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
+                  {/* Account Row */}
+                  <div className="flex items-center space-x-2 mb-1.5">
+                    <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
+                      PS
+                    </div>
+                    <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
+                      purplesamosa.co
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
+                    </span>
+                  </div>
+                  {/* Caption */}
+                  <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
+                    shot by purple samosa ✦
+                  </p>
+                  {/* Audio */}
+                  <div className="flex items-center gap-1 text-white/80">
+                    <span className="text-[8px] animate-pulse">🎵</span>
+                    <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
+                      Original Audio — Purple Samosa
+                    </span>
                   </div>
                 </div>
               </div>

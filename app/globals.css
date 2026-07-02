@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -13,7 +14,7 @@
   --color-white: #FFFFFF;
 
   /* Font pairings */
-  --font-display: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --font-body: var(--font-body), "Inter", sans-serif;
 
   /* Marquee infinite scroll animations */

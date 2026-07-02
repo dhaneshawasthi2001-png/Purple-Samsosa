@@ -38,7 +38,13 @@ export default function MarqueeCrossing() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-purple-soft/10 blur-[100px] rounded-full pointer-events-none" />
 
       {/* Decorative samosa watermark behind the cross */}
-      <div className="absolute w-[200px] h-[200px] bg-purple-primary/5 samosa-blob blur-sm opacity-20 pointer-events-none" />
+      <div className="absolute w-[180px] h-[180px] opacity-[0.08] pointer-events-none select-none">
+        <img
+          src="https://res.cloudinary.com/dmj0smemf/image/upload/v1782995848/file_00000000df44720bb2584d0deccd5d90_e1jfy8.png"
+          alt="Samosa Outline"
+          className="w-full h-full object-contain brightness-0"
+        />
+      </div>
 
       {/* Strip 1: Beige (cream-soft), angled down, scrolls left-to-right (reverse) */}
       <div 

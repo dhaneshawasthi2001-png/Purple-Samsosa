@@ -10,7 +10,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: MessageCircle, href: "https://wa.me/919999999999", label: "WhatsApp" },
+    { icon: MessageCircle, href: "https://wa.me/918448447408", label: "WhatsApp" },
   ];
 
   return (

@@ -14,11 +14,13 @@ export default function FinalCTA() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const availableServices = [
-    "branding",
-    "web & app dev",
-    "video production",
+    "branding and designing",
     "social media",
-    "meta ads & seo",
+    "performance marketing",
+    "seo",
+    "creative asset design",
+    "web development",
+    "video production",
   ];
 
   const handleServiceToggle = (service: string) => {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, MessageCircle, X, Instagram, Share2, Award } from "lucide-react";
+import { Heart, MessageCircle, X, Instagram, Share2, Award, Facebook } from "lucide-react";
 
 interface SocialPost {
   id: string;
@@ -221,6 +221,32 @@ export default function SocialGrid() {
           ))}
         </div>
 
+        {/* Brand Social Connections */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 max-w-lg mx-auto">
+          <motion.a
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://www.instagram.com/purplesamosaaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto font-body font-bold text-sm bg-purple-primary text-cream-base px-8 py-4 rounded-full hover:bg-purple-deep hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2.5 group"
+          >
+            <Instagram size={18} className="group-hover:scale-110 transition-transform duration-200" />
+            <span>Follow us on Instagram</span>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://www.facebook.com/share/1CxT1qz98n/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto font-body font-bold text-sm border-2 border-purple-primary/30 text-purple-primary bg-transparent px-8 py-4 rounded-full hover:border-purple-primary hover:bg-purple-primary hover:text-cream-base hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2.5 group"
+          >
+            <Facebook size={18} className="group-hover:scale-110 transition-transform duration-200" />
+            <span>Connect on Facebook</span>
+          </motion.a>
+        </div>
+
       </div>
 
       {/* Social Zoom Box Modal */}
@@ -283,12 +309,17 @@ export default function SocialGrid() {
               <div className="p-8 md:p-10 flex flex-col justify-between h-full bg-cream-soft">
                 <div className="space-y-6">
                   {/* Account Header */}
-                  <div className="flex items-center space-x-3 pb-4 border-b border-cream-deep">
-                    <div className="w-10 h-10 rounded-full bg-purple-primary text-cream-base flex items-center justify-center font-display font-bold text-sm tracking-tighter">
+                  <a 
+                    href="https://www.instagram.com/purplesamosaaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center space-x-3 pb-4 border-b border-cream-deep group/header cursor-pointer hover:opacity-90 transition-opacity"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-purple-primary text-cream-base flex items-center justify-center font-display font-bold text-sm tracking-tighter transition-transform group-hover/header:scale-105">
                       PS
                     </div>
                     <div>
-                      <h4 className="font-display text-sm font-bold text-ink lowercase flex items-center space-x-1.5">
+                      <h4 className="font-display text-sm font-bold text-ink lowercase flex items-center space-x-1.5 group-hover/header:text-purple-primary transition-colors">
                         <span>purplesamosa.co</span>
                         <span className="w-2.5 h-2.5 rounded-full bg-purple-primary" />
                       </h4>
@@ -296,12 +327,19 @@ export default function SocialGrid() {
                         creative content engine
                       </p>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Caption */}
                   <div className="space-y-3 max-h-[220px] overflow-y-auto pr-2">
                     <p className="font-body text-sm text-ink/85 leading-relaxed font-normal">
-                      <span className="font-bold lowercase mr-1.5">purplesamosa.co</span>
+                      <a 
+                        href="https://www.instagram.com/purplesamosaaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-bold lowercase mr-1.5 hover:text-purple-primary transition-colors cursor-pointer"
+                      >
+                        purplesamosa.co
+                      </a>
                       {activePost.caption}
                     </p>
                     <p className="font-body text-xs text-purple-primary font-bold">

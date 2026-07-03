@@ -33,16 +33,15 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? "bg-purple-deep border-b border-purple-soft/20 py-4 shadow-sm"
             : "bg-transparent py-6"
-        }`}
+          }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex items-center justify-between">
           {/* Logo Area */}
-          <Link 
-            href="#home" 
+          <Link
+            href="#home"
             className="flex items-center transition-all duration-300"
           >
             <Image
@@ -50,9 +49,8 @@ export default function Navbar() {
               alt="Purple Samosa Logo"
               width={260}
               height={80}
-              className={`transition-all duration-300 object-contain ${
-                isScrolled ? "h-[32px] md:h-[38px]" : "h-[44px] md:h-[52px]"
-              } w-auto ${isScrolled ? "" : "brightness-0 opacity-80"}`}
+              className={`transition-all duration-300 object-contain ${isScrolled ? "h-[32px] md:h-[38px]" : "h-[44px] md:h-[52px]"
+                } w-auto ${isScrolled ? "" : "brightness-0 opacity-80"}`}
               priority
             />
           </Link>
@@ -63,14 +61,12 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`font-body font-medium text-sm transition-colors cursor-pointer relative group py-1 ${
-                  isScrolled ? "text-white/80 hover:text-white" : "text-purple-deep/80 hover:text-purple-deep"
-                }`}
+                className={`font-body font-medium text-sm transition-colors cursor-pointer relative group py-1 ${isScrolled ? "text-white/80 hover:text-white" : "text-purple-deep/80 hover:text-purple-deep"
+                  }`}
               >
                 {link.label}
-                <span className={`absolute bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full ${
-                  isScrolled ? "bg-white" : "bg-purple-deep"
-                }`} />
+                <span className={`absolute bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300 ease-[0.16,1,0.3,1] group-hover:w-full ${isScrolled ? "bg-white" : "bg-purple-deep"
+                  }`} />
               </Link>
             ))}
           </nav>
@@ -84,11 +80,10 @@ export default function Navbar() {
             >
               <Link
                 href="#contact"
-                className={`font-body font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-200 ${
-                  isScrolled 
-                    ? "bg-cream-base text-purple-deep hover:bg-white hover:shadow-lg" 
+                className={`font-body font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-200 ${isScrolled
+                    ? "bg-cream-base text-purple-deep hover:bg-white hover:shadow-lg"
                     : "bg-purple-primary text-cream-base hover:bg-purple-deep hover:shadow-lg"
-                }`}
+                  }`}
               >
                 Start Your Growth
               </Link>
@@ -98,9 +93,8 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className={`md:hidden p-2 transition-colors cursor-pointer ${
-              isScrolled ? "text-white hover:text-cream-soft" : "text-purple-deep hover:text-purple-soft"
-            }`}
+            className={`md:hidden p-2 transition-colors cursor-pointer ${isScrolled ? "text-white hover:text-cream-soft" : "text-purple-deep hover:text-purple-soft"
+              }`}
             aria-label="Open Menu"
           >
             <Menu size={24} />
@@ -119,7 +113,7 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-purple-deep flex flex-col justify-between p-6 md:hidden"
           >
             <div className="grain-overlay" />
-            
+
             {/* Header */}
             <div className="flex items-center justify-between relative z-10">
               {/* Logo */}

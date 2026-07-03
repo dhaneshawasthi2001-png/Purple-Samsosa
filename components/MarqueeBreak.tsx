@@ -4,14 +4,14 @@ import React from "react";
 
 export default function MarqueeBreak() {
   const items = [
-    "branding",
-    "seo",
+    "branding and designing",
     "social media",
     "performance marketing",
+    "seo",
+    "creative asset design",
+    "web development",
     "pr & positioning",
-    "websites",
-    "identity design",
-    "content strategy",
+    "growth auditing",
   ];
 
   // Repeat items to ensure smooth infinite loop scroller width

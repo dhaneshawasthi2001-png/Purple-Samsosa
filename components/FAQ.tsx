@@ -55,7 +55,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "what services does purple samosa offer?",
-      answer: "We offer end-to-end creative growth services: branding and identity design, custom website and web app development, performance marketing, search engine optimization (SEO), social media strategy, and public relations (PR) positioning.",
+      answer: "We offer end-to-end creative growth services: branding and designing, social media strategy, performance marketing, search engine optimization (SEO), creative asset design, web development, and public relations (PR) positioning.",
     },
     {
       question: "who do you work with?",

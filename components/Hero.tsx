@@ -32,7 +32,7 @@ export default function Hero() {
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[78px] font-medium text-ink tracking-tight leading-[1.08]">
             Your <br />
-            <span className="text-purple-primary italic font-serif">Success Story</span> <br />
+            <span className="text-purple-primary italic font-playfair font-normal">Success Story</span> <br />
             Starts Now!
           </h1>
 

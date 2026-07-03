@@ -5,13 +5,13 @@ import React from "react";
 export default function MarqueeCrossing() {
   const strip1Phrases = [
     "custom brand identities",
-    "high-converting web engineering",
-    "organic search optimization",
-    "ROI-driven performance ads",
     "social media scaling",
+    "ROI-driven performance ads",
+    "organic search optimization",
     "creative content production",
-    "bespoke visual systems",
+    "high-converting web engineering",
     "strategic brand positioning",
+    "bespoke visual systems",
   ];
 
   const strip2Phrases = [

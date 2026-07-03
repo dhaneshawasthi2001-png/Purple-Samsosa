@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle, Facebook } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/purplesamosaaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1CxT1qz98n/", label: "Facebook" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: MessageCircle, href: "https://wa.me/918448447408", label: "WhatsApp" },
   ];
@@ -76,12 +77,14 @@ export default function Footer() {
             Services
           </h4>
           <nav className="flex flex-col space-y-3 font-body text-sm text-cream-soft/80">
-            <span className="block hover:text-white transition-colors">Performance Marketing</span>
-            <span className="block hover:text-white transition-colors">Web Development</span>
+            <span className="block hover:text-white transition-colors">Branding and Designing</span>
             <span className="block hover:text-white transition-colors">Social Media</span>
-            <span className="block hover:text-white transition-colors">SEO & Positioning</span>
-            <span className="block hover:text-white transition-colors">Brand Identity</span>
-            <span className="block hover:text-white transition-colors">Public Relations</span>
+            <span className="block hover:text-white transition-colors">Performance Marketing</span>
+            <span className="block hover:text-white transition-colors">SEO</span>
+            <span className="block hover:text-white transition-colors">Creative Asset Design</span>
+            <span className="block hover:text-white transition-colors">Web Development</span>
+            <span className="block hover:text-white transition-colors">PR & Communications</span>
+            <span className="block hover:text-white transition-colors">Growth Auditing</span>
           </nav>
         </div>
 

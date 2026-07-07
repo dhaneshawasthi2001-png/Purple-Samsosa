@@ -109,9 +109,8 @@ export default function Footer() {
               </p>
             </div>
             <p className="leading-relaxed text-xs">
-              Felix Parking, 302, Omaxe Residency 1,<br />
-              Arjunganj, Unit No-1219 12th floor,<br />
-              Lucknow, 226002, UP, IN
+              1219 Omaxe Hazratganj,<br />
+              Lucknow, 226002
             </p>
           </div>
         </div>

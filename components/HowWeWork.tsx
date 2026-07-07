@@ -63,25 +63,25 @@ export default function HowWeWork() {
     {
       num: "01",
       title: "discover & audit",
-      desc: "We perform a deep diagnostic audit of your brand's digital footprint. We analyze your website conversion rates, ad spend efficiency, search engine rankings, and competitor benchmarks to discover hidden blocks.",
+      desc: "We go through your website, your ad spend, your rankings, and your competitors before we suggest a single thing. Most brands are surprised by what we find first.",
       icon: Search,
     },
     {
       num: "02",
       title: "growth roadmap",
-      desc: "We design a comprehensive creative and conversion strategy. From UX structural roadmaps and client acquisition funnels to layout restructures and custom campaigns, we align your brand with customer demands.",
+      desc: "Everything we uncover turns into a plan — what to fix, what to build, and what to launch first for the fastest visible movement.",
       icon: Compass,
     },
     {
       num: "03",
       title: "execution & launch",
-      desc: "Our design studio and development squads build the digital and brand assets. We build your high-converting website, roll out brand redesigns, construct advertising accounts, and design modern visual systems.",
+      desc: "Design and development build in parallel. Your website, your visual identity, your ad accounts — built to work as one system, not separate deliverables.",
       icon: Cpu,
     },
     {
       num: "04",
       title: "scaling & optimization",
-      desc: "We manage and scale your digital performance campaigns. We run search optimization, manage paid ads bids, manage content pipelines, and analyze performance telemetry to optimize customer acquisition costs.",
+      desc: "Launch is the start line, not the finish. We stay in the account — running search, managing spend, and reading the numbers weekly to bring acquisition cost down.",
       icon: TrendingUp,
     },
   ];
@@ -92,13 +92,13 @@ export default function HowWeWork() {
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="font-body text-xs font-bold uppercase tracking-[0.15em] text-purple-primary block">
-            Our Execution Strategy
+            our execution strategy
           </span>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium text-ink tracking-tight lowercase">
             how we work.
           </h2>
           <p className="font-body text-sm md:text-base text-ink/70 max-w-xl mx-auto font-normal">
-            We align branding and digital growth under one single workflow. Scroll down to see our execution funnel.
+            One workflow, four stages, zero guesswork. Here&apos;s what happens after you say yes.
           </p>
         </div>
 

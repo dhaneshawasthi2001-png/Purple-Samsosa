@@ -23,7 +23,7 @@ export default function SocialGrid() {
       likes: 843,
       comments: 64,
       hashtag: "#curation",
-      caption: "visual content curation for our brand partners. clean layouts and aesthetic food curation. ✦",
+      caption: "Every grid tells you what a brand cares about before you read a single caption.",
       date: "2 HOURS AGO",
     },
     {
@@ -32,7 +32,7 @@ export default function SocialGrid() {
       likes: 1205,
       comments: 118,
       hashtag: "#branding",
-      caption: "bespoke graphic templates designed to drive active user engagement. ✦",
+      caption: "Templates that do the heavy lifting so your team never has to start from a blank canvas.",
       date: "1 DAY AGO",
     },
     {
@@ -41,7 +41,7 @@ export default function SocialGrid() {
       likes: 954,
       comments: 47,
       hashtag: "#photography",
-      caption: "editorial lifestyle photography. styling and direction that tells a story. ✦",
+      caption: "Light, angle, plate — nothing in frame is an accident.",
       date: "3 DAYS AGO",
     },
     {
@@ -50,16 +50,16 @@ export default function SocialGrid() {
       likes: 1542,
       comments: 139,
       hashtag: "#packaging",
-      caption: "premium beverage packaging design close-up. detail-oriented execution. ✦",
+      caption: "The unboxing is marketing too. We treat it that way.",
       date: "5 DAYS AGO",
     },
     {
       id: "post-5",
-      imageUrl: "https://res.cloudinary.com/dmj0smemf/image/upload/v178288961/WhatsApp_Image_2026-07-01_at_12.22.03_PM_fds0ok.jpg", // Wait, in the user's prompt the URL was https://res.cloudinary.com/dmj0smemf/image/upload/v1782888961/WhatsApp_Image_2026-07-01_at_12.22.03_PM_fds0ok.jpg - note 1782888961 instead of 1782888960. Yes, let's keep the exact URL.
+      imageUrl: "https://res.cloudinary.com/dmj0smemf/image/upload/v178288961/WhatsApp_Image_2026-07-01_at_12.22.03_PM_fds0ok.jpg",
       likes: 1109,
       comments: 72,
       hashtag: "#strategy",
-      caption: "digital grids structured for high-performance organic reach. ✦",
+      caption: "A grid isn't a gallery. It's a funnel that happens to look good.",
       date: "1 WEEK AGO",
     },
     {
@@ -68,7 +68,7 @@ export default function SocialGrid() {
       likes: 2108,
       comments: 204,
       hashtag: "#identity",
-      caption: "bold typography and visual identity guides that elevate digital presence. ✦",
+      caption: "Type, color, spacing — the small decisions that make a feed instantly recognizable.",
       date: "2 WEEKS AGO",
     },
   ]);
@@ -138,7 +138,7 @@ export default function SocialGrid() {
             <span className="text-purple-primary">curated to stand out.</span>
           </h2>
           <p className="font-body text-sm md:text-base text-ink/70 mt-4 max-w-xl mx-auto font-normal leading-relaxed">
-            We structure aesthetic Instagram feeds, direct organic capture, and run content systems that convert passive scrollers into hyper-loyal brand fans.
+            A feed is the first impression before the first order. We design ours — and yours — to look intentional from post one.
           </p>
         </div>
 

@@ -37,7 +37,7 @@ export default function Footer() {
             <span className="block font-semibold text-cream-base mb-1">
               Stuffed with Strategy. Served with Growth.
             </span>
-            A creative growth partner combining custom development, brand positioning, and performance campaigns.
+            One team behind your brand&apos;s positioning, website, and every campaign that follows.
           </p>
 
           {/* Social Icons */}
@@ -77,14 +77,14 @@ export default function Footer() {
             Services
           </h4>
           <nav className="flex flex-col space-y-3 font-body text-sm text-cream-soft/80">
-            <span className="block hover:text-white transition-colors">Branding and Designing</span>
-            <span className="block hover:text-white transition-colors">Social Media</span>
-            <span className="block hover:text-white transition-colors">Performance Marketing</span>
-            <span className="block hover:text-white transition-colors">SEO</span>
-            <span className="block hover:text-white transition-colors">Creative Asset Design</span>
-            <span className="block hover:text-white transition-colors">Web Development</span>
-            <span className="block hover:text-white transition-colors">PR & Communications</span>
-            <span className="block hover:text-white transition-colors">Growth Auditing</span>
+            <span className="block hover:text-white transition-colors">brand identity systems</span>
+            <span className="block hover:text-white transition-colors">social media strategy</span>
+            <span className="block hover:text-white transition-colors">performance marketing</span>
+            <span className="block hover:text-white transition-colors">search engine optimization</span>
+            <span className="block hover:text-white transition-colors">creative asset design</span>
+            <span className="block hover:text-white transition-colors">web & app development</span>
+            <span className="block hover:text-white transition-colors">pr & communications</span>
+            <span className="block hover:text-white transition-colors">growth auditing & funnels</span>
           </nav>
         </div>
 

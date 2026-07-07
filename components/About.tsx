@@ -16,13 +16,13 @@ export default function About() {
           className="text-center max-w-3xl mx-auto mb-16 space-y-3"
         >
           <span className="font-body text-xs font-bold uppercase tracking-[0.15em] text-purple-primary block">
-            Who We Are
+            who we are
           </span>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium text-ink tracking-tight lowercase">
             why we started.
           </h2>
         </motion.div>
-
+ 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left Column: Text & Badges */}
           <motion.div 
@@ -34,13 +34,13 @@ export default function About() {
           >
             <div className="font-body text-base text-ink/80 space-y-6 leading-relaxed max-w-xl">
               <p className="text-lg sm:text-xl font-normal text-ink/90 leading-relaxed border-l-[3px] border-purple-primary pl-5 py-1">
-                In today&apos;s digital era, we saw that there is no one who is truly improving the digital presence of a brand. Most agencies either design gorgeous visual assets that drive no traffic, or run technical marketing campaigns that lack brand soul and identity.
+                Most agencies pick a side. The design studios make things that look expensive and get zero clicks. The marketing shops chase clicks and forget the brand has a face.
               </p>
               <p className="pl-6">
-                We founded Purple Samosa to solve this exact gap. We realized that true brand growth requires a unified approach.
+                We got tired of watching brands get split in two — one team on how it looks, another on how it sells — with nobody accountable for both.
               </p>
               <p className="pl-6">
-                By bringing brand positioning, high-end web development, and performance campaigns under a single strategy, we help brands stand out and scale in a crowded digital landscape.
+                Purple Samosa exists to close that gap. One team, one strategy, one voice — carried through your positioning, your website, and every campaign we run for you.
               </p>
             </div>
           </motion.div>

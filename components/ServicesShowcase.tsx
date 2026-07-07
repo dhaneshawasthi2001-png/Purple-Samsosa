@@ -28,8 +28,8 @@ export default function ServicesShowcase() {
   const services = [
     {
       icon: Sparkles,
-      title: "Branding and Designing",
-      desc: "Naming, visual identity architectures, tone of voice guidelines, and positioning models that build customer memory.",
+      title: "brand identity systems",
+      desc: "A logo isn't a brand. We build the full system — name, visual language, tone of voice — so your brand looks and sounds like itself everywhere it shows up.",
       highlight: "visual architecture",
       tags: ["Naming Architect", "Guidelines Docs", "Positioning Models"],
       isDark: true,
@@ -39,8 +39,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: Instagram,
-      title: "Social Media",
-      desc: "Thumb-stopping content, aesthetic brand grids, active community growth, and influencer relationship campaigns.",
+      title: "social media strategy",
+      desc: "Feeds don't grow from posting more — they grow from posting on purpose. We build content systems that turn casual scrollers into people who show up for your brand on repeat.",
       highlight: "content engines",
       tags: ["Gen Z Creative", "Aesthetic Grids", "KOL Outreach"],
       isDark: false,
@@ -50,8 +50,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: BarChart3,
-      title: "Performance Marketing",
-      desc: "Paid acquisition, PPC, ROI-driven performance campaigns, and client conversion analytics to scale customer acquisition.",
+      title: "performance marketing",
+      desc: "Every rupee of ad spend should know why it's there. We build campaigns around what your customers actually do before they buy — not around a media plan that looks good in a deck.",
       highlight: "paid acquisition",
       tags: ["ROI Bidding", "Paid Ads", "Conversion Rate"],
       isDark: true,
@@ -61,8 +61,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: Search,
-      title: "SEO",
-      desc: "Local search and global organic discovery rankings to direct high-intent search traffic straight to your product pages.",
+      title: "search engine optimization",
+      desc: "Ranking for the wrong keyword is just decoration. We chase the searches your actual customers type when they're ready to buy — local and global.",
       highlight: "organic traffic",
       tags: ["Local & Global", "Page Rankings", "Backlink Strategy"],
       isDark: false,
@@ -72,8 +72,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: Box,
-      title: "Creative Asset Design",
-      desc: "Physical package prints, digital layouts, pitches, and corporate assets crafted with pixel-precise attention to detail.",
+      title: "creative asset design",
+      desc: "Packaging, pitch decks, menus, banners — every asset your brand touches gets the same level of craft, because customers notice the ones that don't.",
       highlight: "print & digital layout",
       tags: ["Packaging Layouts", "Pitches & Decks", "Corporate Prints"],
       isDark: true,
@@ -83,8 +83,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: Monitor,
-      title: "Web Development",
-      desc: "Fast, responsive, high-converting websites and custom applications designed to convert traffic into revenue.",
+      title: "web & app development",
+      desc: "A website's job is to convert, not to just exist. We build sites fast enough to hold attention and structured enough to turn a scroll into an order.",
       highlight: "full-stack engineering",
       tags: ["Next.js / React", "Web Apps", "SEO Codebase"],
       isDark: false,
@@ -94,8 +94,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: Megaphone,
-      title: "PR & Communications",
-      desc: "Strategic media outreach, PR releases, brand feature placements, and credibility campaigns to build brand trust.",
+      title: "pr & communications",
+      desc: "Being good isn't the same as being known. We get your brand in front of the rooms, publications, and people that build credibility faster than any ad can.",
       highlight: "media coverage",
       tags: ["Media Pitching", "Credibility Press", "PR Releases"],
       isDark: true,
@@ -105,8 +105,8 @@ export default function ServicesShowcase() {
     },
     {
       icon: TrendingUp,
-      title: "Growth Auditing & Funnels",
-      desc: "Operational conversion funnel diagnostics, client acquisition analysis, and structured business growth plans.",
+      title: "growth auditing & funnels",
+      desc: "Before we build anything new, we find out exactly where you're losing customers. Most growth problems aren't visibility problems — they're leaks nobody mapped.",
       highlight: "strategic diagnostic",
       tags: ["Conversion Funnels", "Acquisition Audit", "Growth Plans"],
       isDark: false,
@@ -128,13 +128,13 @@ export default function ServicesShowcase() {
         {/* Header Elements */}
         <div className="mb-10 text-center max-w-3xl mx-auto px-4">
           <span className="font-body text-xs font-bold uppercase tracking-[0.18em] text-purple-primary block mb-3">
-            our expertise
+            our services
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium text-ink tracking-tight">
-            Explore What We Do.
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium text-ink tracking-tight lowercase">
+            explore what we do.
           </h2>
           <p className="font-body text-sm md:text-base text-ink/75 mt-3 max-w-xl mx-auto font-normal">
-            From performance campaign bidding and web engineering to creative PR positioning and visual design assets.
+            Eight disciplines, one accountable team. No handoffs, no diluted briefs, no &quot;that&apos;s a different department.&quot;
           </p>
         </div>
 

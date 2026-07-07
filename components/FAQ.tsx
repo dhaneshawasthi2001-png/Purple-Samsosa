@@ -55,23 +55,23 @@ export default function FAQ() {
   const faqs = [
     {
       question: "what services does purple samosa offer?",
-      answer: "We offer end-to-end creative growth services: branding and designing, social media strategy, performance marketing, search engine optimization (SEO), creative asset design, web development, and public relations (PR) positioning.",
+      answer: "Everything under one brand system — performance marketing, web and app development, SEO, social media strategy, brand identity, creative asset design, PR, and growth audits. Most clients start with one service and expand once they see how the pieces work together.",
     },
     {
       question: "who do you work with?",
-      answer: "We work with ambitious businesses across all niches—from tech startups and retail brands to professional service firms and consumer product companies looking to scale their digital footprint and build a memorable brand.",
+      answer: "Primarily F&B, hospitality, and consumer brands ready to scale past word-of-mouth — though the same growth playbook applies to any brand serious about its digital presence.",
     },
     {
       question: "how does your performance marketing management work?",
-      answer: "We run structured, data-first growth campaigns. We analyze market intent, optimize conversion paths, manage paid acquisition channels, run SEO campaigns, and set up advanced analytics dashboards to maximize return on ad spend (ROAS) and client acquisition.",
+      answer: "We run and optimize your ad accounts directly — Meta, Google, and platform-specific promotions like Zomato and Swiggy — with weekly reporting on spend, cost per acquisition, and what we're changing next.",
     },
     {
       question: "what are your average project timelines?",
-      answer: "A full brand identity design and website build typically takes 4–6 weeks. Ongoing growth partnerships, content creation, and campaign management are run on a monthly basis, starting with an initial roadmap delivered in the first 2 weeks.",
+      answer: "Brand identity and website builds typically run 4–6 weeks. Performance marketing and SEO are ongoing engagements, since real ranking and acquisition gains compound over 60–90 days, not overnight.",
     },
     {
       question: "what is your pricing approach?",
-      answer: "We offer flat-rate packages for creative assets (branding, identity design, custom website development) and a monthly retainer structure for performance marketing and positioning campaigns. Reach out to get a custom proposal.",
+      answer: "Every quote is scoped to what you actually need — not a fixed package. Book a free audit and we'll tell you exactly where the budget should go first.",
     },
   ];
 
@@ -89,7 +89,7 @@ export default function FAQ() {
             className="lg:col-span-4 space-y-4 lg:sticky lg:top-32 lg:self-start"
           >
             <span className="font-body text-xs font-bold uppercase tracking-[0.18em] text-purple-primary block">
-              Got Questions?
+              got questions?
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-medium text-ink tracking-tight lowercase">
               faq.

@@ -58,9 +58,8 @@ export default function Manifesto() {
           })}
         </h2>
 
-        {/* Small supporting paragraph */}
-        <p className="font-body text-sm md:text-base text-purple-faint max-w-lg mx-auto leading-relaxed pt-2">
-          Every brand touchpoint—from web experiences and identity designs to campaign assets and digital search footprints—is a signature. We build premium digital experiences that people remember.
+        <p className="font-body text-sm md:text-base text-purple-faint max-w-xl mx-auto leading-relaxed pt-2">
+          A website is one touchpoint. A campaign is one touchpoint. A package, a post, a pitch deck — all touchpoints. Miss the thread between them and a brand becomes a collection of assets instead of a memory. We build the thread.
         </p>
       </div>
     </section>

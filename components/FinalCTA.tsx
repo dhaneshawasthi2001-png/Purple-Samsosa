@@ -131,7 +131,7 @@ export default function FinalCTA() {
               variants={itemVariants} 
               className="font-body text-sm sm:text-base text-ink/75 leading-relaxed font-normal"
             >
-              Let&apos;s map out your brand strategy together. Fill out the contact form to request a free creative and digital audit, or hit us up on WhatsApp directly if you want to skip the queue.
+              Tell us what you&apos;re building and where it&apos;s stuck. We&apos;ll send back a free audit — no obligation, no generic PDF, just what we&apos;d actually fix first.
             </motion.p>
 
             {/* Feature Highlights */}
@@ -146,7 +146,7 @@ export default function FinalCTA() {
               </li>
               <li className="flex items-center">
                 <span className="text-[#2ec4b6] mr-3 text-sm">✦</span>
-                <span>bespoke visual proposal with zero obligations</span>
+                <span>bespoke visual proposal, zero pressure to sign</span>
               </li>
             </motion.ul>
 

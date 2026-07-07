@@ -4,25 +4,25 @@ import React from "react";
 
 export default function MarqueeCrossing() {
   const strip1Phrases = [
-    "custom brand identities",
-    "social media scaling",
-    "ROI-driven performance ads",
-    "organic search optimization",
-    "creative content production",
-    "high-converting web engineering",
-    "strategic brand positioning",
-    "bespoke visual systems",
+    "brands people remember",
+    "websites that convert",
+    "campaigns with a point",
+    "content that gets watched",
+    "identities that travel",
+    "search visibility that lasts",
+    "ads that know their audience",
+    "design with a job to do",
   ];
 
   const strip2Phrases = [
-    "we design for active conversion",
-    "scaling customer acquisition",
-    "creating memorable touchpoints",
-    "detail-oriented engineering",
-    "data-driven growth campaigns",
-    "premium digital experiences",
-    "authority building strategy",
-    "elevating your brand presence",
+    "built to be noticed",
+    "made to convert",
+    "designed to be remembered",
+    "engineered with intent",
+    "backed by data",
+    "crafted like it matters",
+    "positioned to win",
+    "built for the long game",
   ];
 
   // Repeat the arrays to ensure they are long enough for seamless looping

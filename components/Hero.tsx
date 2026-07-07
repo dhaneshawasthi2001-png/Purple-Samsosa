@@ -25,27 +25,19 @@ export default function Hero() {
           {/* Brand Badge */}
           <div className="space-y-3">
             <span className="font-body text-xs font-bold uppercase tracking-[0.22em] text-purple-soft/90 block">
-              Stuffed with Strategy • Served with Growth
+              creative growth studio
             </span>
             <div className="w-16 h-[2px] bg-purple-primary" />
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[78px] font-medium text-ink tracking-tight leading-[1.08]">
-            Your <br />
-            <span className="text-purple-primary italic font-playfair font-normal">Success Story</span> <br />
-            Starts Now!
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-medium text-ink tracking-tight leading-[1.08] lowercase">
+            Let&apos;s build a brand <br />
+            that represents you <br />
+            <span className="text-purple-primary italic font-playfair font-normal">everywhere.</span>
           </h1>
 
           <p className="font-body text-sm sm:text-base md:text-lg text-ink/75 leading-relaxed max-w-lg font-normal">
-            Purple Samosa is a premium{" "}
-            <span className="font-bold text-purple-primary">
-              creative growth partner
-            </span>{" "}
-            for ambitious modern brands. By combining strategic{" "}
-            <span className="font-bold text-purple-primary">
-              positioning, high-end development, and performance campaigns
-            </span>{" "}
-            under a single unified strategy, we help you scale and stand out in the digital landscape.
+            Same energy on your packaging, your feed, your website, and the plate someone photographs before they eat it. We build the version of your brand that shows up consistently — online and off — without losing itself along the way.
           </p>
 
           <div className="space-y-4 pt-2">
@@ -59,7 +51,7 @@ export default function Hero() {
                   href="#contact"
                   className="group font-body font-semibold text-sm px-7 py-4 bg-purple-primary text-cream-soft rounded-full hover:bg-purple-deep hover:shadow-lg transition-all duration-300 flex items-center gap-2"
                 >
-                  Start Your Journey
+                  Start Your Growth
                   <span className="transition-transform duration-300 group-hover:translate-x-1.5 text-cream-soft">→</span>
                 </Link>
               </motion.div>

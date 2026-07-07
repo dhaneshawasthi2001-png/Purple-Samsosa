@@ -23,9 +23,18 @@ export default function VideoShowcase() {
 
   const videos: VideoItem[] = [
     {
+      id: "video-0",
+      title: "social campaign reel 00",
+      category: "visual hooks & brand motion",
+      videoUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1783413355/AQO4hFRKxSSxJYXzPDVzJgCP4AbyCl4xx0T5_83Cr0BTTCu7oM29O2O-BQWL20H_mQvp7zDWJqoVsIL3mQcmYH9W_xynhhg.mp4",
+      thumbnailUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1783413355/AQO4hFRKxSSxJYXzPDVzJgCP4AbyCl4xx0T5_83Cr0BTTCu7oM29O2O-BQWL20H_mQvp7zDWJqoVsIL3mQcmYH9W_xynhhg.jpg",
+      aspect: "vertical",
+      client: "brand campaign",
+    },
+    {
       id: "video-1",
       title: "social campaign reel 01",
-      category: "performance optimization & styling",
+      category: "shot to stop the scroll, cut to keep it.",
       videoUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889168/AQOsKN4WBaxOp-3vi7IlY04eN8UCkF7yA-r4-rWz5Ni1cmiUY9CvJtlyUXiU_slkLdTLrWyJo_Z4I8ZJYVhN9PHfD4-z6kfv1dZcBBg_dhiclk.mp4",
       thumbnailUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889168/AQOsKN4WBaxOp-3vi7IlY04eN8UCkF7yA-r4-rWz5Ni1cmiUY9CvJtlyUXiU_slkLdTLrWyJo_Z4I8ZJYVhN9PHfD4-z6kfv1dZcBBg_dhiclk.jpg",
       aspect: "vertical",
@@ -34,7 +43,7 @@ export default function VideoShowcase() {
     {
       id: "video-2",
       title: "social campaign reel 02",
-      category: "creative storytelling & pacing",
+      category: "the story your brand didn't know it needed.",
       videoUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889835/IMG_0493_gvzgoq.mp4",
       thumbnailUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889835/IMG_0493_gvzgoq.jpg",
       aspect: "vertical",
@@ -43,11 +52,20 @@ export default function VideoShowcase() {
     {
       id: "video-3",
       title: "social campaign reel 03",
-      category: "brand identity commercial",
+      category: "no script. just presence.",
       videoUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889731/AQNGlXXLKwuiRFGAqLLfJYTQl3GmFygqQWJWnq-O5-XXIt7sZNjX5-mqfPJmNQ17yl0e49Hm_ttLmrYj62BcFGLuNVtr-T9K3vwgwXc_nlt9hk.mp4",
       thumbnailUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1782889731/AQNGlXXLKwuiRFGAqLLfJYTQl3GmFygqQWJWnq-O5-XXIt7sZNjX5-mqfPJmNQ17yl0e49Hm_ttLmrYj62BcFGLuNVtr-T9K3vwgwXc_nlt9hk.jpg",
       aspect: "vertical",
       client: "organic content",
+    },
+    {
+      id: "video-4",
+      title: "social campaign reel 04",
+      category: "scroll-stopping product reveal",
+      videoUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1783413355/AQNVZWjh3ZwsHOZpsj37tjztB4MihaPQAl4y5UGs3dNBoM1sDEM7X_8gsGpxCuPsZntN2sN4sbj_itx95O0VoK-K_fftpic.mp4",
+      thumbnailUrl: "https://res.cloudinary.com/dmj0smemf/video/upload/v1783413355/AQNVZWjh3ZwsHOZpsj37tjztB4MihaPQAl4y5UGs3dNBoM1sDEM7X_8gsGpxCuPsZntN2sN4sbj_itx95O0VoK-K_fftpic.jpg",
+      aspect: "vertical",
+      client: "brand reveal",
     },
   ];
 
@@ -86,27 +104,27 @@ export default function VideoShowcase() {
             <span className="text-purple-primary">zero crumbs left.</span>
           </h2>
           <p className="font-body text-sm md:text-base text-ink/70 mt-4 max-w-xl mx-auto font-normal leading-relaxed">
-            We direct, shoot, and edit scroll-stopping vertical content designed to hook digital audiences and build massive brand aura.
+            We don&apos;t shoot content to fill a grid. We shoot content that makes someone stop mid-scroll, forget what they were doing, and watch it twice.
           </p>
         </div>
 
-        {/* Video Grid Layout / Horizontal Swiper on Mobile */}
-        <div className="flex lg:grid overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory scroll-smooth no-scrollbar flex-row lg:grid-cols-4 gap-6 lg:gap-8 items-stretch pb-8 lg:pb-0 px-4 md:px-6 lg:px-0 -mx-4 md:-mx-6 lg:mx-0 w-[calc(100%+2rem)] md:w-[calc(100%+3rem)] lg:w-auto">
+        {/* Video Horizontal Scroll Container */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar flex-row gap-6 lg:gap-8 items-stretch pb-8 px-4 md:px-6 lg:px-8 -mx-4 md:-mx-6 lg:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)]">
 
-          {/* Vertical Video 1 (col-span-1) */}
-          <div className="flex justify-center w-[82vw] sm:w-[320px] lg:w-full shrink-0 lg:shrink snap-center lg:snap-none">
+          {/* Vertical Video 0 — NEW FIRST */}
+          <div className="flex justify-center w-[82vw] sm:w-[320px] shrink-0 snap-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 70, damping: 15 }}
+              transition={{ type: "spring", stiffness: 70, damping: 15, delay: 0 }}
               className="w-full flex flex-col justify-between"
             >
               {/* Phone Mockup Frame */}
               <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
-                onMouseEnter={() => handleMouseEnter("video-1")}
-                onMouseLeave={() => handleMouseLeave("video-1")}
+                onMouseEnter={() => handleMouseEnter("video-0")}
+                onMouseLeave={() => handleMouseLeave("video-0")}
                 onClick={() => setActiveVideo(videos[0])}
               >
                 {/* Screen Notch */}
@@ -117,7 +135,7 @@ export default function VideoShowcase() {
                 {/* Video Container */}
                 <div className="absolute inset-0 w-full h-full z-10">
                   <video
-                    ref={(el) => { videoRefs.current["video-1"] = el; }}
+                    ref={(el) => { videoRefs.current["video-0"] = el; }}
                     src={videos[0].videoUrl}
                     poster={videos[0].thumbnailUrl}
                     muted
@@ -138,7 +156,6 @@ export default function VideoShowcase() {
 
                 {/* Instagram Reel Style Overlay on Hover */}
                 <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
-                  {/* Account Row */}
                   <div className="flex items-center space-x-2 mb-1.5">
                     <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
                       PS
@@ -148,11 +165,9 @@ export default function VideoShowcase() {
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
                     </span>
                   </div>
-                  {/* Caption */}
                   <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
                     shot by purple samosa
                   </p>
-                  {/* Audio */}
                   <div className="flex items-center gap-1 text-white/80">
                     <span className="text-[8px] animate-pulse">🎵</span>
                     <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
@@ -166,7 +181,7 @@ export default function VideoShowcase() {
               <div className="mt-4 text-center">
                 <span className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-wider text-purple-primary flex items-center justify-center gap-1.5">
                   <Flame size={12} className="fill-purple-primary text-purple-primary" />
-                  shot by purple samosa
+                  {videos[0].client}
                 </span>
                 <h3 className="font-display text-base sm:text-lg font-semibold text-ink lowercase mt-1 leading-tight">
                   {videos[0].title}
@@ -178,8 +193,8 @@ export default function VideoShowcase() {
             </motion.div>
           </div>
 
-          {/* Vertical Video 2 (col-span-1) */}
-          <div className="flex justify-center w-[82vw] sm:w-[320px] lg:w-full shrink-0 lg:shrink snap-center lg:snap-none">
+          {/* Vertical Video 1 */}
+          <div className="flex justify-center w-[82vw] sm:w-[320px] shrink-0 snap-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -190,8 +205,8 @@ export default function VideoShowcase() {
               {/* Phone Mockup Frame */}
               <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
-                onMouseEnter={() => handleMouseEnter("video-2")}
-                onMouseLeave={() => handleMouseLeave("video-2")}
+                onMouseEnter={() => handleMouseEnter("video-1")}
+                onMouseLeave={() => handleMouseLeave("video-1")}
                 onClick={() => setActiveVideo(videos[1])}
               >
                 {/* Screen Notch */}
@@ -202,7 +217,7 @@ export default function VideoShowcase() {
                 {/* Video Container */}
                 <div className="absolute inset-0 w-full h-full z-10">
                   <video
-                    ref={(el) => { videoRefs.current["video-2"] = el; }}
+                    ref={(el) => { videoRefs.current["video-1"] = el; }}
                     src={videos[1].videoUrl}
                     poster={videos[1].thumbnailUrl}
                     muted
@@ -223,7 +238,6 @@ export default function VideoShowcase() {
 
                 {/* Instagram Reel Style Overlay on Hover */}
                 <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
-                  {/* Account Row */}
                   <div className="flex items-center space-x-2 mb-1.5">
                     <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
                       PS
@@ -233,11 +247,9 @@ export default function VideoShowcase() {
                       <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
                     </span>
                   </div>
-                  {/* Caption */}
                   <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
                     shot by purple samosa
                   </p>
-                  {/* Audio */}
                   <div className="flex items-center gap-1 text-white/80">
                     <span className="text-[8px] animate-pulse">🎵</span>
                     <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
@@ -251,7 +263,7 @@ export default function VideoShowcase() {
               <div className="mt-4 text-center">
                 <span className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-wider text-purple-primary flex items-center justify-center gap-1.5">
                   <Flame size={12} className="fill-purple-primary text-purple-primary" />
-                  {videos[1].client}
+                  shot by purple samosa
                 </span>
                 <h3 className="font-display text-base sm:text-lg font-semibold text-ink lowercase mt-1 leading-tight">
                   {videos[1].title}
@@ -263,20 +275,20 @@ export default function VideoShowcase() {
             </motion.div>
           </div>
 
-          {/* Vertical Video 3 (col-span-1) */}
-          <div className="flex justify-center w-[82vw] sm:w-[320px] lg:w-full shrink-0 lg:shrink snap-center lg:snap-none">
+          {/* Vertical Video 2 */}
+          <div className="flex justify-center w-[82vw] sm:w-[320px] shrink-0 snap-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 70, damping: 15, delay: 0.1 }}
+              transition={{ type: "spring", stiffness: 70, damping: 15, delay: 0.05 }}
               className="w-full flex flex-col justify-between"
             >
               {/* Phone Mockup Frame */}
               <div
                 className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
-                onMouseEnter={() => handleMouseEnter("video-3")}
-                onMouseLeave={() => handleMouseLeave("video-3")}
+                onMouseEnter={() => handleMouseEnter("video-2")}
+                onMouseLeave={() => handleMouseLeave("video-2")}
                 onClick={() => setActiveVideo(videos[2])}
               >
                 {/* Screen Notch */}
@@ -287,7 +299,7 @@ export default function VideoShowcase() {
                 {/* Video Container */}
                 <div className="absolute inset-0 w-full h-full z-10">
                   <video
-                    ref={(el) => { videoRefs.current["video-3"] = el; }}
+                    ref={(el) => { videoRefs.current["video-2"] = el; }}
                     src={videos[2].videoUrl}
                     poster={videos[2].thumbnailUrl}
                     muted
@@ -348,8 +360,175 @@ export default function VideoShowcase() {
             </motion.div>
           </div>
 
-          {/* Aesthetic Brand Box (col-span-1) */}
-          <div className="flex w-[82vw] sm:w-[320px] lg:w-full shrink-0 lg:shrink snap-center lg:snap-none">
+          {/* Vertical Video 3 */}
+          <div className="flex justify-center w-[82vw] sm:w-[320px] shrink-0 snap-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 70, damping: 15, delay: 0.1 }}
+              className="w-full flex flex-col justify-between"
+            >
+              {/* Phone Mockup Frame */}
+              <div
+                className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
+                onMouseEnter={() => handleMouseEnter("video-3")}
+                onMouseLeave={() => handleMouseLeave("video-3")}
+                onClick={() => setActiveVideo(videos[3])}
+              >
+                {/* Screen Notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-4.5 bg-ink/90 rounded-b-2xl z-30 flex items-center justify-center">
+                  <div className="w-10 h-1 bg-ink/20 rounded-full" />
+                </div>
+
+                {/* Video Container */}
+                <div className="absolute inset-0 w-full h-full z-10">
+                  <video
+                    ref={(el) => { videoRefs.current["video-3"] = el; }}
+                    src={videos[3].videoUrl}
+                    poster={videos[3].thumbnailUrl}
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Overlay Darkening */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-ink/25 opacity-60 group-hover:opacity-85 transition-opacity duration-300" />
+                </div>
+
+                {/* Tap to Play Indicator */}
+                <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="w-14 h-14 rounded-full bg-cream-soft/10 border border-cream-soft/30 backdrop-blur-sm flex items-center justify-center text-cream-soft shadow-inner">
+                    <Play size={20} className="fill-cream-soft ml-0.5" />
+                  </div>
+                </div>
+
+                {/* Instagram Reel Style Overlay on Hover */}
+                <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
+                  {/* Account Row */}
+                  <div className="flex items-center space-x-2 mb-1.5">
+                    <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
+                      PS
+                    </div>
+                    <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
+                      purplesamosa
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
+                    </span>
+                  </div>
+                  {/* Caption */}
+                  <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
+                    shot by purple samosa
+                  </p>
+                  {/* Audio */}
+                  <div className="flex items-center gap-1 text-white/80">
+                    <span className="text-[8px] animate-pulse">🎵</span>
+                    <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
+                      Original Audio — Purple Samosa
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Text info below the video screen */}
+              <div className="mt-4 text-center">
+                <span className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-wider text-purple-primary flex items-center justify-center gap-1.5">
+                  <Flame size={12} className="fill-purple-primary text-purple-primary" />
+                  {videos[3].client}
+                </span>
+                <h3 className="font-display text-base sm:text-lg font-semibold text-ink lowercase mt-1 leading-tight">
+                  {videos[3].title}
+                </h3>
+                <p className="font-body text-xs text-ink/65 lowercase">
+                  {videos[3].category}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Vertical Video 4 — NEW LAST */}
+          <div className="flex justify-center w-[82vw] sm:w-[320px] shrink-0 snap-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 70, damping: 15, delay: 0.15 }}
+              className="w-full flex flex-col justify-between"
+            >
+              {/* Phone Mockup Frame */}
+              <div
+                className="relative aspect-[9/16] rounded-[2.5rem] border-[8px] border-ink/90 bg-[#070707] shadow-2xl overflow-hidden group cursor-pointer w-full"
+                onMouseEnter={() => handleMouseEnter("video-4")}
+                onMouseLeave={() => handleMouseLeave("video-4")}
+                onClick={() => setActiveVideo(videos[4])}
+              >
+                {/* Screen Notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-4.5 bg-ink/90 rounded-b-2xl z-30 flex items-center justify-center">
+                  <div className="w-10 h-1 bg-ink/20 rounded-full" />
+                </div>
+
+                {/* Video Container */}
+                <div className="absolute inset-0 w-full h-full z-10">
+                  <video
+                    ref={(el) => { videoRefs.current["video-4"] = el; }}
+                    src={videos[4].videoUrl}
+                    poster={videos[4].thumbnailUrl}
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Overlay Darkening */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-ink/25 opacity-60 group-hover:opacity-85 transition-opacity duration-300" />
+                </div>
+
+                {/* Tap to Play Indicator */}
+                <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="w-14 h-14 rounded-full bg-cream-soft/10 border border-cream-soft/30 backdrop-blur-sm flex items-center justify-center text-cream-soft shadow-inner">
+                    <Play size={20} className="fill-cream-soft ml-0.5" />
+                  </div>
+                </div>
+
+                {/* Instagram Reel Style Overlay on Hover */}
+                <div className="absolute inset-x-0 bottom-0 p-4 pb-6 z-25 flex flex-col justify-end text-left transition-opacity duration-300 opacity-0 group-hover:opacity-100 pointer-events-none">
+                  <div className="flex items-center space-x-2 mb-1.5">
+                    <div className="w-5 h-5 rounded-full bg-purple-primary border border-white/20 flex items-center justify-center font-display font-extrabold text-[7px] text-cream-soft select-none">
+                      PS
+                    </div>
+                    <span className="text-[10px] font-bold text-white lowercase tracking-wide flex items-center gap-1 drop-shadow-md">
+                      purplesamosa
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2ec4b6]" />
+                    </span>
+                  </div>
+                  <p className="text-[10px] text-white/95 font-body leading-relaxed drop-shadow-md mb-1.5">
+                    shot by purple samosa
+                  </p>
+                  <div className="flex items-center gap-1 text-white/80">
+                    <span className="text-[8px] animate-pulse">🎵</span>
+                    <span className="text-[8px] font-body uppercase tracking-wider drop-shadow-sm overflow-hidden whitespace-nowrap text-ellipsis max-w-[140px]">
+                      Original Audio — Purple Samosa
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Text info below the video screen */}
+              <div className="mt-4 text-center">
+                <span className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-wider text-purple-primary flex items-center justify-center gap-1.5">
+                  <Flame size={12} className="fill-purple-primary text-purple-primary" />
+                  {videos[4].client}
+                </span>
+                <h3 className="font-display text-base sm:text-lg font-semibold text-ink lowercase mt-1 leading-tight">
+                  {videos[4].title}
+                </h3>
+                <p className="font-body text-xs text-ink/65 lowercase">
+                  {videos[4].category}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Aesthetic Brand Box */}
+          <div className="flex w-[82vw] sm:w-[320px] shrink-0 snap-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -369,13 +548,13 @@ export default function VideoShowcase() {
                   engineered for retention.
                 </h4>
                 <p className="font-body text-xs sm:text-sm text-cream-deep/80 leading-relaxed font-normal">
-                  In food, beverage, and design, visual pacing is everything. We combine curated art direction with quick-cut formats, elegant custom styling, and crisp edits that optimize for viewer attention.
+                  Food and drink live or die in the first two seconds. We build for that — tight cuts, deliberate pacing, styling that photographs as good as it tastes — so the scroll stops before the thumb even decides to.
                 </p>
               </div>
 
               <div className="flex flex-col space-y-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#2ec4b6] pt-6 border-t border-purple-soft/30 relative z-10 text-left">
-                <span> vertical campaign formats</span>
-                <span> data-backed pacing hooks</span>
+                <span>✦ built for the vertical scroll</span>
+                <span>✦ paced to hold attention</span>
               </div>
             </motion.div>
           </div>

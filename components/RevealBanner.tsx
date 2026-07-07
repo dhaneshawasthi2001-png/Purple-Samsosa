@@ -31,8 +31,8 @@ export default function RevealBanner() {
             stuffed with strategy. <br />
             <span className="text-cream-soft font-normal italic">served with growth.</span>
           </h2>
-          <p className="font-body text-sm sm:text-base md:text-lg text-cream-soft/75 max-w-xl mx-auto leading-relaxed font-normal pt-2">
-            We build high-performance brand positionings, visual identity guidelines, and bespoke web platforms engineered for maximum digital reach.
+          <p className="font-body text-sm sm:text-base md:text-lg text-cream-soft/75 max-w-2xl mx-auto leading-relaxed font-normal pt-2">
+            Positioning without distribution is just a nice idea. Distribution without positioning is just noise. We build both into one system — so growth never comes at the cost of what your brand actually stands for.
           </p>
         </div>
       </div>

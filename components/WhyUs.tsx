@@ -8,34 +8,34 @@ export default function WhyUs() {
     {
       icon: Coffee,
       title: "results-driven team",
-      desc: "We eat, sleep, and breathe growth strategy. We partner with ambitious, growth-minded businesses — zero generic templates.",
+      desc: "No two briefs get the same template. We work with brands that want to grow, not brands that want a nice-looking case study.",
     },
     {
       icon: Code,
       title: "conversion-focused design",
-      desc: "We study user behavior metrics, search patterns, and conversion triggers. We turn layouts into customer acquisition engines.",
+      desc: "Every layout answers to behavior data first, aesthetics second — though usually, the two agree.",
     },
     {
       icon: Layers,
       title: "brand & strategy aligned",
-      desc: "No disconnect between business margins and creative layouts. We align operational goals with premium visual output.",
+      desc: "A brand's numbers and its visuals should tell the same story. When they don't, growth stalls no matter how good the ads are.",
     },
     {
       icon: MessageCircle,
       title: "positioning that sells",
-      desc: "Every digital touchpoint, print asset, and media copy acts as a high-end showcase designed to drive user action.",
+      desc: "Every asset — digital or print — is built to do one job: move someone closer to a decision.",
     },
     {
       icon: BarChart3,
       title: "data-backed content strategy",
-      desc: "No vanity likes or empty views. We produce layouts, organic assets, and copy written specifically as lead-generation funnels.",
+      desc: "Likes are a vanity metric until they convert. We build content and copy around what actually moves someone from scroll to sale.",
     },
   ];
 
   const flagshipProp = {
     icon: ShieldCheck,
     title: "end-to-end execution",
-    desc: "We don't hand off template files and walk away. We write the code, deploy the systems, and manage organic search campaigns daily to grow your business.",
+    desc: "No file handoff, no disappearing after launch. We stay inside the accounts, running the campaigns, watching the numbers.",
   };
 
   const containerVariants = {
@@ -79,13 +79,13 @@ export default function WhyUs() {
           className="mb-16 md:mb-24 text-center max-w-3xl mx-auto"
         >
           <span className="font-body text-xs font-bold uppercase tracking-[0.18em] text-purple-primary bg-cream-deep/60 px-5 py-2 rounded-full border border-cream-deep inline-block mb-3">
-            Why Purple Samosa
+            why purple samosa
           </span>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium text-ink tracking-tight lowercase">
             built for growth.
           </h2>
           <p className="font-body text-sm md:text-base text-ink/70 mt-3 max-w-xl mx-auto font-normal">
-            Generic design agencies don&apos;t understand acquisition funnels. Traditional consultants don&apos;t know visual craft. We combine both.
+            Design agencies rarely understand acquisition. Growth consultants rarely understand craft. Most brands end up managing both — with neither one talking to the other.
           </p>
         </motion.div>
 
@@ -120,7 +120,7 @@ export default function WhyUs() {
 
             <div className="space-y-6 pt-4 lg:pt-8 relative z-10 text-left">
               <p className="font-body text-xs sm:text-sm text-cream-soft/85 leading-relaxed font-normal">
-                We merge operational business margins with premium visual outputs to build high-performance acquisition engines.
+                Margins and visuals aren&apos;t separate conversations for us. Every layout we ship is judged by whether it looks premium and whether it performs — both, not either.
               </p>
               <div className="flex items-center space-x-2 bg-cream-base/10 px-4 py-2.5 rounded-xl border border-cream-base/10 text-cream-base w-fit">
                 <Sparkles size={14} className="text-cream-soft" />
